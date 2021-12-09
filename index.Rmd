@@ -46,92 +46,773 @@ class_diag <- function(score, truth, positive, cutoff=.5){
 
 # Mining, Classification, Prediction
 
-## Name and EID here
+## Alice Gee, ag67642
 
 ### Introduction 
 
-Paragraph or two introducing your datasets and variables, why they are interesting to you, etc. See instructions for more information
+     As a continuation from project 1, I will conduct further analysis on my dog breed datasets. Here, I am working with the tidy version of the joined dataset previously created in project 1, with the data coming from the official AKC breed dataset and a compiled kaggle dataset. There are 104 distinct dog breed entries (with "Giant Schnauzer" having two entries because of two secondary classifications) under the `Breed` variable, with 14 other variables including (but not limited to) `height`, `weight`, `Temperament`, `AvgPupPrice`, and first/second `Classification`. For non-temperament related variables, all variables except for `IntelligenceRating` and `Watchdog` had 105 observations, with the former having 87 observations and the latter having 104 observations. For the `Temperament` variables, separated into distinct attributes, each group had at least 15 observations, with the most being 35 observations (e.g. "Loyal"). 
 
 ```{R}
 library(tidyverse)
-# read your datasets in here, e.g., with read_csv()
+dog_data <- read_csv("combined_dog_data.csv")
+dog_data_wider <- dog_data %>% pivot_wider(names_from = "Temperament", values_from = "Indicator") %>% select(-MeanHeight)
 
-# if your dataset needs tidying, do so here
-
-# any other code here
+# counts for temperament attributes (i.e. positive value indicator)
+dog_data_wider %>% select(is_numeric) %>% summarize_all(function(x)sum(x)) %>% select(Alert, Friendly, Affectionate, 
+                                                                                      Loyal, Gentle, Independent, 
+                                                                                      Protective, Playful)
+# overall counts for all observations
+dog_data_wider %>% summarise_all(function(x) sum(!is.na(x)))
 ```
 
 ### Cluster Analysis
-
 ```{R}
 library(cluster)
-# clustering code here
+
+# Average Height vs. Average Weight 
+HW_dog_data <- dog_data_wider %>% select(AvgHeightInches, AvgWeightLbs)
+sil_width<-vector() 
+for(i in 2:10){  
+  kms <- kmeans(HW_dog_data,centers=i) 
+  sil <- silhouette(kms$cluster,dist(HW_dog_data)) 
+  sil_width[i]<-mean(sil[,3])}
+ggplot()+geom_line(aes(x=1:10,y=sil_width))+scale_x_continuous(name="k",breaks=1:10)
+
+# Average Height vs. Average Puppy Price
+HP_dog_data <- dog_data_wider %>% select(AvgHeightInches, AvgPupPrice)
+sil_width<-vector() 
+for(i in 2:10){  
+  kms <- kmeans(HP_dog_data,centers=i) 
+  sil <- silhouette(kms$cluster,dist(HP_dog_data)) 
+  sil_width[i]<-mean(sil[,3])}
+ggplot()+geom_line(aes(x=1:10,y=sil_width))+scale_x_continuous(name="k",breaks=1:10)
+
+# Average Puppy Price vs. Watchdog Rating 
+PW_dog_data <- dog_data_wider %>% select(AvgPupPrice, Watchdog) %>% na.omit()
+sil_width<-vector() 
+for(i in 2:10){  
+  kms <- kmeans(PW_dog_data,centers=i) 
+  sil <- silhouette(kms$cluster,dist(PW_dog_data)) 
+  sil_width[i]<-mean(sil[,3])}
+ggplot()+geom_line(aes(x=1:10,y=sil_width))+scale_x_continuous(name="k",breaks=1:10)
+```
+The overall kmeans clustering approximations vary greatly depending on the numerical variables that are chosen. For some comparisons, 3 clusters would yield the highest silhouette width, while at times 8-9 clusters would yield the highest silhouette width. The purpose of this section is to show the variability in appropriate cluster numbers. For the most part, there is not a distinct number of groupings that would yields strong or reasonable silhouette width. That said, knowing there are 7 group classifications for dog breeds, the PAM clustering will proceed with 7 cluster groups. 
+
+#### Mutlivariable PAM Clustering 
+
+##### PAM Clustering on Average Height, Weight, and Puppy Price 
+```{r}
+numeric_dog_data <- dog_data_wider %>% select(AvgHeightInches, AvgWeightLbs, AvgPupPrice)
+
+set.seed(322)
+pam2 <-numeric_dog_data %>% scale %>% pam(7)
+pam2
+
+# Visualization of Pairwise Combinations 
+library(GGally)
+numeric_dog_data <- numeric_dog_data %>% mutate(cluster = as.factor(pam2$clustering))
+numeric_dog_data %>% ggpairs(cols= 1:3, aes(color=cluster))
+
+# goodness of fit; silhouette width 
+plot(pam2,which=2)
+```
+Through PAM clustering focusing on average height, weight, and puppy price, the average silhouette width was 0.34 (weak structure). Using ggpairs, multiple visualization methods demonstrate the comparison between the groups. Across the average height for each group, there are distinct peaks separating each cluster group. Similarly, but less clear, the average weight also shows distinction between each group. When comparing the average height and average weight, among each group, there is an overall correlation of 0.855, indicating a strong positive correlation between height and weight. On the other hand, distinction between groups based on puppy price is not clear. For the most part, the prices are left skewed and similar to one another. There is a weak correlation between puppy price and height or weight. Overall, following the 7 distinct groupings based on the number of `FirstClassification`, there is the goodness of fit is weak and considered artificial. This makes sense as these groupings are imposed on dog breeds based on appearance and human-given tasks (i.e. through breeders and AKC officials), and less on natural/biological reasons.  
+
+##### PAM Clustering on Average Height, Weight, Puppy Price, and Watchdog Rating 
+```{r}
+numeric_dog_data <- dog_data_wider %>% select(AvgHeightInches, AvgWeightLbs, AvgPupPrice, Watchdog)
+
+set.seed(322)
+pam2 <-numeric_dog_data %>% scale %>% pam(7)
+pam2
+
+# Visualization of Pairwise Combinations 
+numeric_dog_data <- numeric_dog_data %>% mutate(cluster = as.factor(pam2$clustering))
+numeric_dog_data %>% ggpairs(cols= 1:4, aes(color=cluster))
+
+# goodness of fit; silhouette width 
+plot(pam2,which=2)
+```
+When looking at a PAM clustering focusing on average height, weight, puppy price, and watchdog rating, the average silhouette width was 0.21 (little/no structure). Using ggpairs, multiple visualization methods demonstrate the comparison between the groups. Here, the analysis on the first three variables are the same as the previous section. Focusing on watchdog rating, there lacks a distinct differentiation among the groups. Of the 7 groups, 2 of the groups scored high on overall watchdog ratings, with the other 5 groups overlapping in lesser scores. While there is slight correlation between watchdog rating and puppy price, there is a weak positive correlation between average height and weight. It should also be noted that watchdog rating could be treated more like a categorical variable rather than a numerical variable, which would be better analyzed through the gower method. Overall, following the 7 distinct groupings based on the number of `FirstClassification`, there lacks structure and goodness of fit. Analysis over the chosen variables indicate that the selection of 7 breed groupings do not yield groupings based on distinct features but through artificial means.     
+
+##### PAM Clustering with 5 Relevant Numeric Variables 
+```{r}
+numeric_dog_data <- dog_data_wider %>% select(AvgHeightInches, AvgWeightLbs, AvgPupPrice, Watchdog, IntelligenceRating)
+
+set.seed(322)
+pam2 <-numeric_dog_data %>% scale %>% pam(7)
+pam2
+
+# Visualization of Pairwise Combinations 
+numeric_dog_data <- numeric_dog_data %>% mutate(cluster = as.factor(pam2$clustering))
+numeric_dog_data %>% ggpairs(cols= 1:5, aes(color=cluster))
+
+# goodness of fit; silhouette width 
+plot(pam2,which=2)
 ```
 
-Discussion of clustering here
-    
+When looking at a PAM clustering of all the numeric variables, the average silhouette width was 0.12 (little/no structure). Using ggpairs, multiple visualization methods demonstrate the comparison between the groups. Here, the analysis on the first four variables are the same as the previous section. Focusing on intelligence rating, there lacks  differentiation among the groups. For the most part, the average intelligence ratings have the same averages with some groups more spread out and some groups more focused at the average/center. Other than with watchdog rating (with a weak negative correlation), intelligence rating does not show any correlation with the other variables. Overall, following the 7 distinct groupings based on the number of `FirstClassification`, there lacks structure and goodness of fit. At least pertaining to the classification of breeds, it it most likely that intelligence and watchdog rating were not considered when making the distinctions.   
+
+
+#### PAM Clustering Focusing on Specific Pairs 
+##### Average Height vs. Average Weight
+```{r}
+set.seed(322) 
+pamHW <- HW_dog_data %>% pam(k=7) 
+pamclustHW<-HW_dog_data %>% mutate(cluster=as.factor(pamHW$clustering))
+pamclustHW_all<-dog_data_wider %>% mutate(cluster=as.factor(pamHW$clustering))
+
+# creates color groupings for clusters
+pamclustHW %>% ggplot(aes(AvgHeightInches,AvgWeightLbs,color=cluster)) + geom_point()
+
+# average numeric values for each cluster group 
+pamclustHW %>% group_by(cluster) %>% summarize_if(is.numeric,mean,na.rm=T)
+pamclustHW_all %>% group_by(cluster) %>% summarize_if(is.numeric,mean,na.rm=T)
+
+# final medoids that are most representative of their cluster
+dog_data_wider%>%slice(pamHW$id.med)
+
+# original plot of height vs weight colored by first classification groupings 
+dog_data_wider%>%
+  ggplot(aes(AvgHeightInches,AvgWeightLbs,color=FirstClassification)) + geom_point()
+
+# combination plot of original coloring based on first classification and shaping based on PAM clustering 
+pamclustHW%>%mutate(Grouping=dog_data_wider$FirstClassification)%>%
+  ggplot(aes(AvgHeightInches, AvgWeightLbs, color=Grouping, shape=cluster))+geom_point(size=4)
+
+# goodness of fit; silhouette width 
+plot(pamHW,which=2)
+```
+The PAM clustering focusing on average height and weight had an average silhouette width of 0.54 (reasonable structure). The first plot illustrates the PAM clusters on a height vs. weight scatterplot of all the observations. The 7 groupings were distributed as height and weight increased. The following 2 tables illustrate the average values for the numeric variables for each group, showing the differences between the groups. The next table shows the medoids (i.e. dog breeds) that are most representative of their groupings and their respective numeric variables (and corresponding values). The second plot is the scatterplot and coloring based on the actual groupings from AKC. The following plot combines the first and second plot, with the color representing the actual groupings and the different shapes as the PAM clusters. For the most part, the PAM clustering was reasonably accurate in when looking at average height and weight. It is likely that height and weight were contributing factors when classifying dog breeds into their first classification. 
+
+##### Average Height vs. Average Puppy Price
+```{r}
+set.seed(322)
+pamHP <- HP_dog_data %>% pam(k=7)
+pamclustHP<-HP_dog_data %>% mutate(cluster=as.factor(pamHP$clustering))
+pamclustHP_all<-dog_data_wider %>% mutate(cluster=as.factor(pamHP$clustering))
+
+# creates color groupings for clusters
+pamclustHP %>% ggplot(aes(AvgHeightInches,AvgPupPrice,color=cluster)) + geom_point()
+
+# average numeric values for each cluster group 
+pamclustHP %>% group_by(cluster) %>% summarize_if(is.numeric,mean,na.rm=T)
+pamclustHP_all %>% group_by(cluster) %>% summarize_if(is.numeric,mean,na.rm=T)
+
+# final medoids that are most representative of their cluster
+dog_data_wider%>%slice(pamHP$id.med)
+
+# original plot of height vs puppy price colored by first classification groupings 
+dog_data_wider%>%
+  ggplot(aes(AvgHeightInches,AvgPupPrice,color=FirstClassification)) + geom_point()
+
+# combination plot of original coloring based on first classification and shaping based on PAM clustering 
+pamclustHP%>%mutate(Grouping=dog_data_wider$FirstClassification)%>%
+  ggplot(aes(AvgHeightInches, AvgPupPrice, color=Grouping, shape=cluster))+geom_point(size=4)
+
+# goodness of fit; silhouette width 
+plot(pamHP,which=2)
+```
+The PAM clustering focusing on average height and puppy price had an average silhouette width of 0.6 (reasonable structure). The first plot illustrates the PAM clusters on a height vs. puppy price scatterplot of all the observations. The 7 groupings were distributed as puppy price increased. The following 2 tables illustrate the average values for the numeric variables for each group, showing the differences between the groups. The next table shows the medoids (i.e. dog breeds) that are most representative of their groupings and their respective numeric variables (and corresponding values). The second plot is the scatterplot and coloring based on the actual groupings from AKC. The following plot combines the first and second plot, with the color representing the actual groupings and the different shapes as the PAM clusters. From a visual analysis, these PAM clusters do not appear as accurate as the previous section, however, the average silhouette width is higher in this PAM clustering. Compared to the previous section, this PAM clustering has more reasonable structure.  
+
+##### Average Puppy Price vs. Watchdog Rating
+```{r}
+PW_dog_data <- dog_data_wider %>% select(AvgPupPrice, Watchdog)
+set.seed(322)
+pamPW <- PW_dog_data %>% pam(k=7)
+pamclustPW<-PW_dog_data %>% mutate(cluster=as.factor(pamPW$clustering))
+pamclustPW_all<-dog_data_wider %>% mutate(cluster=as.factor(pamPW$clustering))
+
+# creates color groupings for clusters
+pamclustPW %>% ggplot(aes(AvgPupPrice,Watchdog,color=cluster)) + geom_point()
+
+# average numeric values for each cluster group
+pamclustPW %>% group_by(cluster) %>% summarize_if(is.numeric,mean,na.rm=T)
+pamclustPW_all %>% group_by(cluster) %>% summarize_if(is.numeric,mean,na.rm=T)
+
+# final medoids that are most representative of their cluster
+dog_data_wider%>%slice(pamPW$id.med)
+
+# original plot of puppy price vs watchdog rating colored by first classification groupings 
+dog_data_wider%>%
+  ggplot(aes(AvgPupPrice,Watchdog,color=FirstClassification)) + geom_point()
+
+# combination plot of original coloring based on first classification and shaping based on PAM clustering 
+pamclustPW%>%mutate(Grouping=dog_data_wider$FirstClassification)%>%
+  ggplot(aes(AvgPupPrice, Watchdog, color=Grouping, shape=cluster))+geom_point(size=4)
+
+# goodness of fit; silhouette width 
+plot(pamPW,which=2)
+```
+The PAM clustering focusing on average puppy price and watchdog rating had an average silhouette width of 0.61 (reasonable structure). The first plot illustrates the PAM clusters on a height vs. puppy price scatterplot of all the observations. The 7 groupings were distributed as puppy price increased. The following 2 tables illustrate the average values for the numeric variables for each group, showing the differences between the groups. The next table shows the medoids (i.e. dog breeds) that are most representative of their groupings and their respective numeric variables (and corresponding values). The second plot is the scatterplot and coloring based on the actual groupings from AKC. The following plot combines the first and second plot, with the color representing the actual groupings and the different shapes as the PAM clusters. Similar to the previous section, the visual analysis of these PAM clusters do not appear as accurate as the PAM section for "Average Height vs. Average Weight", however, the average silhouette width is the highest for this PAM clustering. Compared to the previous two sections, this PAM clustering has more reasonable structure. 
+
+#### Gower Dissimilarities 
+```{r}
+dog_data_wider2 <- dog_data_wider %>% select(Breed, AvgHeightInches, AvgWeightLbs, AvgPupPrice) %>% distinct()
+
+#create dissimilarity matrix
+dog_data_wider2 <- dog_data_wider2 %>% mutate_if(is.character,as.factor) %>% column_to_rownames("Breed") 
+gower1 <- daisy(dog_data_wider2, metric = "gower")
+
+# Choose Number of Clusters with PAM: Silhouette Width
+sil_width<-vector()
+for(i in 2:10){  
+  pam_fit <- pam(gower1, diss = TRUE, k = i)  
+  sil_width[i] <- pam_fit$silinfo$avg.width}
+ggplot()+geom_line(aes(x=1:10,y=sil_width))+scale_x_continuous(name="k",breaks=1:10)
+
+# PAM Clustering with Gower Dissimilarities 
+pam3 <- pam(gower1, k = 2, diss = T)
+
+# final medoids that are most representative of their cluster
+dog_data_wider %>% slice(pam3$id.med)
+
+# goodness of fit; silhouette width 
+plot(pam3,which=2)
+
+# Visualization of Pairwise Combinations 
+dog_data_wider2 <- dog_data_wider2 %>% mutate(cluster = as.factor(pam3$clustering))
+dog_data_wider2 %>% ggpairs(cols= 1:4, aes(color=cluster))
+```
+
+Here, instead of following the 7 cluster groups as suggested by AKC breed `FirstClassification`, a cluster group of 2 was chosen due to it's significantly higher silhouette width, which was 0.45. The following table shows the medoids (i.e. dog breeds) that are most representative of their groups and their respective numeric variables (and corresponding values). The two groups are distinctly different sizes, with the first group having a taller height and heavier weight than the second group. The next plot illustrates the average silhouette width of 0.45, which is a weak goodness of fit. The last plot (using ggpairs) shows the differences between the two groupings across average height, weight, and puppy price. Across all variables, the first group tends to have higher values than group two. While there is weak correlation between average puppy price and height/weight, there is a strong positive correlation between height and weight (as expected). 
+
     
 ### Dimensionality Reduction with PCA
 
-```{R}
-# PCA code here
+#### PCA Analysis with Average Height, Weight, and Puppy Price 
+```{r}
+# standardize data
+numeric_dog_data <- dog_data_wider %>% select(Breed, AvgHeightInches, AvgWeightLbs, AvgPupPrice) %>% distinct()
+temp <- dog_data_wider %>% select(Breed, FirstClassification, AvgHeightInches, AvgWeightLbs, AvgPupPrice) %>% distinct()
+numeric_dog_data <- numeric_dog_data %>% select(-Breed)
+numeric_dog_data <- data.frame(scale(numeric_dog_data))
+rownames(numeric_dog_data) <- temp$Breed
+
+# PCA run-through 
+pca1 <- prcomp(numeric_dog_data, center = T, scale=T)
+summary(pca1)
+
+# Number of PCAs  
+dog_pca<-princomp(numeric_dog_data)
+eigval<-dog_pca$sdev^2 
+varprop=round(eigval/sum(eigval), 2) 
+ggplot() + geom_bar(aes(y=varprop, x=1:3), stat="identity") + xlab("") + geom_path(aes(y=varprop, x=1:3)) + 
+  geom_text(aes(x=1:3, y=varprop, label=round(varprop, 2)), vjust=1, col="white", size=5) + 
+  scale_y_continuous(breaks=seq(0, .6, .2), labels = scales::percent) + 
+  scale_x_continuous(breaks=1:10)
+round(cumsum(eigval)/sum(eigval), 2) 
+
+# Plot PCA scores
+dogdf<-data.frame(Name = temp$Breed, PC1=dog_pca$scores[, 1],PC2=dog_pca$scores[, 2])
+ggplot(dogdf, aes(PC1, PC2)) + geom_point()
+# Colored on first classification of breeds
+temp <- temp %>% mutate(PC1=dog_pca$scores[,1]) %>% mutate(PC2 = dog_pca$scores[,2])
+temp %>% ggplot(aes(x = PC1, y = PC2, color = FirstClassification)) + geom_point()
+
+#highest on PC1
+dog_pca$scores[,1:3] %>% as.data.frame  %>% top_n(3, Comp.1)
+
+#lowest PC1
+dog_pca$scores[,1:3] %>% as.data.frame  %>% top_n(-3, Comp.1)
+
+#highest on PC2
+dog_pca$scores[,1:3] %>% as.data.frame  %>% top_n(3, wt=Comp.2)
+
+#lowest on PC2
+dog_pca$scores[,1:3] %>% as.data.frame %>% top_n(3, wt=desc(Comp.2))
 ```
 
-Discussions of PCA here. 
+Focusing on average height, weight, and puppy price, three PCs can be used to describe the entirety of the given dataset. That said, only PC1 and PC2 are needed to described 95% of the variance in the data, with PC1 encompassing 66% and PC2 encompassing 30%. This is demonstrated in the bar plot, illustrating the proportion of variance each PC describes. The first scatterplot plots the observations of each dog breed across PC1 and PC2, with no apparent trend or linear regression. The second scatterplot colors based on the `FirstClassification` of the dog breeds. The coloring shows there is some distinction between the groupings across PC1. Toy breeds tend to score lower on PC1, with working dogs scoring higher on PC1. In between, the other 5 groups are overlapped, but with slight clustering. This trend is similar in a plot of average height vs weight. There, the same observations can be noted: toy breeds are the smallest while working breeds tend to be the largest breeds of dogs. Across PC2, the values among the groups were generally between [-1,1], with some outliers that scored more negatively. The three breeds that scored highest on PC1 were the Tibetan Mastiff, Irish Wolfhound, and Mastiff. This means that across both height and weight, these three breeds scored the highest on both. On the other hand, the three breeds that scored the lowest on PC1 were the Chihuahua, Papillon, and the Japanese Chin. Across height and weight, these breeds scored the lowest on both variables. The three breeds that scored the highest on PC2 were the English Setter, Plott Hound, and Harrier. These breeds were more likely to be heavier than their expected weight for their height (i.e. they had a higher weight and a lower height proportion than other breeds). On the contrary, the three breeds that scored the lowest on PC2 were the French Bulldog, Portuguese Water Dog, and Sussex Spaniel. These breeds were more likely to be lighter than their expected height (i.e. they had a lower weight and a higher height proportion than other breeds). While average puppy price is included in this analysis, there is no clear evidence of how this variable affects the PCA analysis. This is seen in previous visualization plots that illustrate an weak correlation between puppy price and group/cluster distinctions. 
+
+
+#### PCA Analysis with Average Height, Weight, Puppy Price, and Watchdog Rating 
+```{r}
+# standardize data
+numeric_dog_data <- dog_data_wider %>% select(Breed, AvgHeightInches, AvgWeightLbs, AvgPupPrice, Watchdog) %>% na.omit()
+temp <- dog_data_wider %>% select(Breed, FirstClassification, AvgHeightInches, AvgWeightLbs, AvgPupPrice, Watchdog) %>% na.omit()
+numeric_dog_data <- numeric_dog_data %>% select(-Breed)
+numeric_dog_data <- data.frame(scale(numeric_dog_data))
+rownames(numeric_dog_data) <- temp$Breed
+
+# PCA run-through 
+pca1 <- prcomp(numeric_dog_data, center = T, scale=T)
+summary(pca1)
+
+# Number of PCAs  
+dog_pca<-princomp(numeric_dog_data)
+eigval<-dog_pca$sdev^2 
+varprop=round(eigval/sum(eigval), 2) 
+ggplot() + geom_bar(aes(y=varprop, x=1:4), stat="identity") + xlab("") + geom_path(aes(y=varprop, x=1:4)) + 
+  geom_text(aes(x=1:4, y=varprop, label=round(varprop, 2)), vjust=1, col="white", size=5) + 
+  scale_y_continuous(breaks=seq(0, .6, .2), labels = scales::percent) + 
+  scale_x_continuous(breaks=1:10)
+round(cumsum(eigval)/sum(eigval), 2) 
+
+# Plot PCA scores
+dogdf<-data.frame(Name = temp$Breed, PC1=dog_pca$scores[, 1],PC2=dog_pca$scores[, 2])
+ggplot(dogdf, aes(PC1, PC2)) + geom_point()
+# Colored on first classification of breeds
+temp <- temp %>% mutate(PC1=dog_pca$scores[,1]) %>% mutate(PC2 = dog_pca$scores[,2])
+temp %>% ggplot(aes(x = PC1, y = PC2, color = FirstClassification)) + geom_point()
+
+#highest on PC1
+dog_pca$scores[,1:4] %>% as.data.frame  %>% top_n(3, Comp.1)
+
+#lowest PC1
+dog_pca$scores[,1:4] %>% as.data.frame  %>% top_n(-3, Comp.1)
+
+#highest on PC2
+dog_pca$scores[,1:4] %>% as.data.frame  %>% top_n(3, wt=Comp.2)
+
+#lowest on PC2
+dog_pca$scores[,1:4] %>% as.data.frame %>% top_n(3, wt=desc(Comp.2))
+```
+
+By adding one more variable, watchdog rating, to the PCA analysis, the number of PCs needed to describe the entirety of the dataset increases to 4. Still, only PC1 and PC2 are needed to describe 77% of the variance in the data, which is sufficient. Here, PC1 encompasses 55% and PC2 encompasses 22% of the variance. The subsequent bar plot illustrates the proportion of variance described by each PC. While there was an addition of another variable, the two scatterplots are the same as those in the previous section. The three breeds that scored highest on PC1 were the Tibetan Mastiff, Mastiff, and Great Dane. This means that across both height and weight, these three breeds scored the highest on both. On the other hand, the three breeds that scored the lowest on PC1 were the Affenpinscher, Chihuahua, and Toy Fox Terrier. Across height and weight, these breeds scored the lowest on both variables. The three breeds that scored the highest on PC2 were the Great Pyrenees, Pointer, and Plott Hound. These breeds were more likely to be heavier than their expected weight for their height (i.e. they had a higher weight and a lower height proportion than other breeds). On the contrary, the three breeds that scored the lowest on PC2 were the French Bulldog, Portuguese Water Dog, and Sussex Spaniel (consistent with the previous section). These breeds were more likely to be lighter than at their expected height (i.e. they had a lower weight and a higher height proportion than other breeds). While average puppy price and watchdog rating are included in this analysis, there is no clear evidence of how these variables affect the PCA analysis. This is particularly seen in previous visualization plots that illustrate an weak correlation between puppy price/watchdog rating and group/cluster distinctions. 
+
 
 ###  Linear Classifier
 
+#### Prediction of Temperament: Loyal
 ```{R}
-# linear classifier code here
-```
+# create numeric data without NA-heavy variables
+numeric_dog_data <- dog_data_wider %>% select(-IntelligenceRating) %>% select(is.numeric) %>% na.omit()
 
+loyal_dog_data <- numeric_dog_data %>% select(is.numeric) %>% select(1:9, Loyal)
+
+logistic_fit <- glm(Loyal~., data=loyal_dog_data, family="binomial")
+prob_reg <- predict(logistic_fit, type = "response")
+class_diag(prob_reg, loyal_dog_data$Loyal, positive = 1)
+
+# Confusion Matrix 
+table(actual = factor(loyal_dog_data$Loyal==1, levels= c("TRUE", "FALSE")), 
+      predicted = factor(prob_reg>.5, levels= c("TRUE", "FALSE"))) %>% addmargins
+```
+Using a linear classifier, the model was trained on all the numeric variables (excluding `IntelligenceRating` because of too many NA values) for the entire dataset. The AUC was 0.7681, indicating the model was decently successful with predicting the binary variable of `Loyal`. There were 16 true positives, 19 false negatives (type II error), 6 false positives (type I error), and 63 true negatives. The true positive rate (tpr/"sensitivity") is 0.457, indicating that a subpar proportion of true positives were correctly predicted. The true negative rate (tnr/"specificity") is 0.913, indicating that a high proportion of true negatives were correctly predicted. The positive predicted value ("precision") is 0.727, indicating that a high proportion of cases predicted positives that were actually positive. 
+    
+#### Prediction of Temperament: Affectionate
 ```{R}
-# cross-validation of linear classifier here
-```
+affectionate_dog_data <- numeric_dog_data %>% select(is.numeric) %>% select(1:9, Affectionate)
 
-Discussion here
+logistic_fit <- glm(Affectionate~., data=affectionate_dog_data, family="binomial")
+prob_reg <- predict(logistic_fit, type = "response")
+class_diag(prob_reg, affectionate_dog_data$Affectionate, positive = 1)
+
+# Confusion Matrix 
+table(actual = factor(affectionate_dog_data$Affectionate==1, levels= c("TRUE", "FALSE")), 
+      predicted = factor(prob_reg>.5, levels= c("TRUE", "FALSE"))) %>% addmargins
+```
+Using a linear classifier, the model was trained on all the numeric variables (excluding `IntelligenceRating` because of too many NA values) for the entire dataset. The AUC was 0.6416, indicating the model was reasonably successful with predicting the binary variable of `Affectionate`. There were 5 true positives, 29 false negatives (type II error), 3 false positives (type I error), and 67 true negatives. The true positive rate (tpr/"sensitivity") is 0.147, indicating that a low proportion of true positives were correctly predicted. The true negative rate (tnr/"specificity") is 0.957, indicating that a high proportion of true negatives were correctly predicted. The positive predicted value ("precision") is 0.625, indicating that a high proportion of cases predicted positives that were actually positive. 
+
+#### Prediction of Temperament: Friendly
+```{R}
+friendly_dog_data <- numeric_dog_data %>% select(is.numeric) %>% select(1:9, Friendly)
+
+logistic_fit <- glm(Friendly~., data=friendly_dog_data, family="binomial")
+prob_reg <- predict(logistic_fit, type = "response")
+class_diag(prob_reg, friendly_dog_data$Friendly, positive = 1)
+
+# Confusion Matrix 
+table(actual = factor(friendly_dog_data$Friendly==1, levels= c("TRUE", "FALSE")), 
+      predicted = factor(prob_reg>.5, levels= c("TRUE", "FALSE"))) %>% addmargins
+```
+Using a linear classifier, the model was trained on all the numeric variables (excluding `IntelligenceRating` because of too many NA values) for the entire dataset. The AUC was 0.7122, indicating the model was successful with predicting the binary variable of `Friendly`. There were 8 true positives, 24 false negatives (type II error), 5 false positives (type I error), and 67 true negatives. The true positive rate (tpr/"sensitivity") is 0.25, indicating that a low proportion of true positives were correctly predicted. The true negative rate (tnr/"specificity") is 0.931, indicating that a high proportion of true negatives were correctly predicted. The positive predicted value ("precision") is 0.615, indicating that a fair proportion of cases predicted positives that were actually positive. 
+
+### Cross-Validation of Linear Classifiers 
+
+#### Cross Validation for Loyal
+```{r}
+set.seed(322)
+k=10
+
+data<-sample_frac(loyal_dog_data) 
+folds <- rep(1:k, length.out=nrow(data)) 
+
+diags<-NULL
+for(i in 1:k){
+  # create training and test sets
+  train<-data[folds!=i,] 
+  test<-data[folds==i,] 
+  truth<-test$Loyal
+
+  # train model
+  fit <- glm(Loyal~., data=train, family="binomial")
+
+  # test model
+  probs <- predict(fit, newdata = test, type = "response")
+
+  # get performance metrics for each fold
+  diags<-rbind(diags,class_diag(probs,truth, positive=1)) 
+}
+
+#average performance metrics across all folds
+summarize_all(diags,mean)
+```
+Using the linear classifier, the AUC was 0.7681, however after cross-validation, the AUC dropped to 0.68143. This drop in AUC indicates 2 things: the model when trained to the entire dataset does not perform as well as expected and that there are signs of overfitting (i.e. the first model was trained to fit too specific to the quirks of the entire dataset). That said, both the linear classifier model and cross-validation model through k-folds show reasonable success at predicting the binary variable `Loyal`. 
+
+#### Cross Validation for Affectionate
+```{r}
+set.seed(322)
+k=10
+
+data<-sample_frac(affectionate_dog_data) 
+folds <- rep(1:k, length.out=nrow(data)) 
+
+diags<-NULL
+for(i in 1:k){
+  # create training and test sets
+  train<-data[folds!=i,] 
+  test<-data[folds==i,] 
+  truth<-test$Affectionate
+
+  # train model
+  fit <- glm(Affectionate~., data=train, family="binomial")
+
+  # test model
+  probs <- predict(fit, newdata = test, type = "response")
+
+  # get performance metrics for each fold
+  diags<-rbind(diags,class_diag(probs,truth, positive=1)) 
+}
+
+#average performance metrics across all folds
+summarize_all(diags,mean)
+```
+Using the linear classifier, the AUC was 0.6416, however after cross-validation, the AUC dropped to 0.40428. This drop in AUC indicates 2 things: the model when trained to the entire dataset does not perform as well as expected and that there are signs of overfitting (i.e. the first model was trained to fit too specific to the quirks of the entire dataset). While the linear classifier model appeared to perform reasonably when trained to the entire dataset, the cross-validation shows that the actual model makes weak predictions for the binary variable `Affectionate`. 
+
+#### Cross Validation for Friendly
+```{r}
+set.seed(322)
+k=10
+
+data<-sample_frac(friendly_dog_data) 
+folds <- rep(1:k, length.out=nrow(data)) 
+
+diags<-NULL
+for(i in 1:k){
+  # create training and test sets
+  train<-data[folds!=i,] 
+  test<-data[folds==i,] 
+  truth<-test$Friendly
+
+  # train model
+  fit <- glm(Friendly~., data=train, family="binomial")
+
+  # test model
+  probs <- predict(fit, newdata = test, type = "response")
+
+  # get performance metrics for each fold
+  diags<-rbind(diags,class_diag(probs,truth, positive=1)) 
+}
+
+#average performance metrics across all folds
+summarize_all(diags,mean)
+```
+Using the linear classifier, the AUC was 0.7122, however after cross-validation, the AUC dropped to 0.64821. This drop in AUC indicates 2 things: the model when trained to the entire dataset does not perform as well as expected and that there are signs of overfitting (i.e. the first model was trained to fit too specific to the quirks of the entire dataset). That said, both the linear classifier model and cross-validation model through k-folds show reasonable success at predicting the binary variable `Friendly`.
+
 
 ### Non-Parametric Classifier
 
+#### Prediction of Temperament: Loyal
 ```{R}
 library(caret)
-# non-parametric classifier code here
+knn_fit <- knn3(Loyal == 1~., data = loyal_dog_data)
+prob_knn <- predict(knn_fit,loyal_dog_data)
+class_diag(prob_knn[,2], loyal_dog_data$Loyal, positive = 1)
+
+# Confusion Matrix 
+table(actual = factor(loyal_dog_data$Loyal==1, levels= c("TRUE", "FALSE")), 
+      predicted = factor(prob_reg>.5, levels= c("TRUE", "FALSE"))) %>% addmargins
 ```
 
+Using a non-parametric classifier (i.e. k-nearest-neighbors), the model was trained on all the numeric variables (excluding `IntelligenceRating` because of too many NA values) for the entire dataset. The AUC was 0.846, indicating the model was successful with predicting the binary variable of `Loyal`. There were 3 true positives, 32 false negatives (type II error), 10 false positives (type I error), and 59 true negatives. The true positive rate (tpr/"sensitivity") is 0.086, indicating that a very low proportion of true positives were correctly predicted. The true negative rate (tnr/"specificity") is 0.855, indicating that a high proportion of true negatives were correctly predicted. The positive predicted value ("precision") is 0.231, indicating that a low proportion of cases predicted positives that were actually positive. 
+
+#### Prediction of Temperament: Affectionate
 ```{R}
-# cross-validation of np classifier here
+knn_fit <- knn3(Affectionate == 1~., data = affectionate_dog_data)
+prob_knn <- predict(knn_fit,affectionate_dog_data)
+class_diag(prob_knn[,2], affectionate_dog_data$Affectionate, positive = 1)
+
+# Confusion Matrix 
+table(actual = factor(affectionate_dog_data$Affectionate==1, levels= c("TRUE", "FALSE")), 
+      predicted = factor(prob_reg>.5, levels= c("TRUE", "FALSE"))) %>% addmargins
+```
+Using a non-parametric classifier (i.e. k-nearest-neighbors), the model was trained on all the numeric variables (excluding `IntelligenceRating` because of too many NA values) for the entire dataset. The AUC was 0.7725, indicating the model was successful with predicting the binary variable of `Loyal`. There were 3 true positives, 31 false negatives (type II error), 10 false positives (type I error), and 60 true negatives. The true positive rate (tpr/"sensitivity") is 0.088, indicating that a very low proportion of true positives were correctly predicted. The true negative rate (tnr/"specificity") is 0.857, indicating that a high proportion of true negatives were correctly predicted. The positive predicted value ("precision") is 0.231, indicating that a low proportion of cases predicted positives that were actually positive.
+
+#### Prediction of Temperament: Friendly
+```{R}
+knn_fit <- knn3(Friendly == 1~., data = friendly_dog_data)
+prob_knn <- predict(knn_fit,friendly_dog_data)
+class_diag(prob_knn[,2], friendly_dog_data$Friendly, positive = 1)
+
+# Confusion Matrix 
+table(actual = factor(friendly_dog_data$Friendly==1, levels= c("TRUE", "FALSE")), 
+      predicted = factor(prob_reg>.5, levels= c("TRUE", "FALSE"))) %>% addmargins
+```
+Using a non-parametric classifier (i.e. k-nearest-neighbors), the model was trained on all the numeric variables (excluding `IntelligenceRating` because of too many NA values) for the entire dataset. The AUC was 0.8082, indicating the model was successful with predicting the binary variable of `Loyal`. There were 8 true positives, 24 false negatives (type II error), 5 false positives (type I error), and 67 true negatives. The true positive rate (tpr/"sensitivity") is 0.25, indicating that a low proportion of true positives were correctly predicted. The true negative rate (tnr/"specificity") is 0.931, indicating that a high proportion of true negatives were correctly predicted. The positive predicted value ("precision") is 0.615, indicating that a fair proportion of cases predicted positives that were actually positive.
+
+### Cross Validation of Non-Parametric Classifiers 
+
+#### Cross Validation for Loyal
+```{r}
+set.seed(322)
+k=10
+
+data<-sample_frac(loyal_dog_data) 
+folds <- rep(1:k, length.out=nrow(data)) 
+
+diags<-NULL
+for(i in 1:k){
+  # create training and test sets
+  train<-data[folds!=i,] 
+  test<-data[folds==i,] 
+  truth<-test$Loyal
+
+  # train model
+  fit <- knn3(Loyal == 1~., data=train)
+
+  # test model
+  probs <- predict(fit,newdata = test)[,2]
+
+  # get performance metrics for each fold
+  diags<-rbind(diags,class_diag(probs,truth, positive=1)) 
+}
+
+#average performance metrics across all folds
+summarize_all(diags,mean)
 ```
 
-Discussion
+Using the non-parametric classifier, the AUC was 0.846, however after cross-validation, the AUC dropped to 0.73137. This drop in AUC indicates 2 things: the model when trained to the entire dataset does not perform as well as expected and that there are signs of overfitting (i.e. the first model was trained to fit too specific to the quirks of the entire dataset). That said, both the non-parametric classifier model and cross-validation model through k-folds show significant success at predicting the binary variable `Loyal`. Compared to the linear classifier, the non-parametric classifier performed better across both instances: training over the entire dataset and through k-folds cross validation. 
 
+#### Cross Validation for Affectionate
+```{r}
+set.seed(322)
+k=10
+
+data<-sample_frac(affectionate_dog_data) 
+folds <- rep(1:k, length.out=nrow(data)) 
+
+diags<-NULL
+for(i in 1:k){
+  # create training and test sets
+  train<-data[folds!=i,] 
+  test<-data[folds==i,] 
+  truth<-test$Affectionate
+
+  # train model
+  fit <- knn3(Affectionate == 1~., data=train)
+
+  # test model
+  probs <- predict(fit,newdata = test)[,2]
+
+  # get performance metrics for each fold
+  diags<-rbind(diags,class_diag(probs,truth, positive=1)) 
+}
+
+#average performance metrics across all folds
+summarize_all(diags,mean)
+```
+
+Using the non-parametric classifier, the AUC was 0.7725, however after cross-validation, the AUC dropped to 0.53956. This drop in AUC indicates 2 things: the model when trained to the entire dataset does not perform as well as expected and that there are signs of overfitting (i.e. the first model was trained to fit too specific to the quirks of the entire dataset). Like the linear classifier prediction for `Affectionate`, the non-parametric classifier prediction also has significant overfitting. While the non-parametric model appeared to perform reasonably when trained to the entire dataset, the cross-validation shows that the actual model makes significantly less accurate predictions for the binary variable `Affectionate`. That said, compared to the linear classifier, the non-parametric classifier also performed better across both instances: training over the entire dataset and through k-folds cross validation (similar to the non-parametric classifier for `Loyal`. 
+
+#### Cross Validation for Friendly
+```{r}
+set.seed(322)
+k=10
+
+data<-sample_frac(friendly_dog_data) 
+folds <- rep(1:k, length.out=nrow(data)) 
+
+diags<-NULL
+for(i in 1:k){
+  # create training and test sets
+  train<-data[folds!=i,] 
+  test<-data[folds==i,] 
+  truth<-test$Friendly
+
+  # train model
+  fit <- knn3(Friendly == 1~., data=train)
+
+  # test model
+  probs <- predict(fit,newdata = test)[,2]
+
+  # get performance metrics for each fold
+  diags<-rbind(diags,class_diag(probs,truth, positive=1)) 
+}
+
+#average performance metrics across all folds
+summarize_all(diags,mean)
+```
+
+Using the non-parametric classifier, the AUC was 0.8082, however after cross-validation, the AUC dropped to 0.57603. This drop in AUC indicates 2 things: the model when trained to the entire dataset does not perform as well as expected and that there are signs of overfitting (i.e. the first model was trained to fit too specific to the quirks of the entire dataset). Similar to that of the previous section, this cross-validation model shows significant overfitting and a drastic decrease in AUC. While the non-parametric predictions appeared to perform well, in actuality, the k-fold cross validation indicates the model only performs weakly/reasonably at best. Compared to the linear classifier, the non-parametic classifier performed better when trained with the entire dataset. That said, when cross-validated with k-folds, the linear classifier model performs better. For the instance of `Friendly` binary predictions, the linear classifier model shows less overfitting than the non-parametric classifier. 
 
 ### Regression/Numeric Prediction
 
+#### Prediction of Temperament: Loyal
 ```{R}
-# regression model code here
+# predicted "loyal" from all other variables 
+linear_fit <- lm(Loyal~., data = loyal_dog_data)
+
+# predicted "loyal"
+yhat <- predict(linear_fit)
+
+#mean squared error (MSE)
+mean((loyal_dog_data$Loyal-yhat)^2) 
 ```
 
+The measure of prediction error for the linear regression model for the binary variable `Loyal` is 0.1742844. 
+
+#### Prediction of Temperament: Affectionate
 ```{R}
-# cross-validation of regression model here
+# predicted "affectionate" from all other variables 
+linear_fit <- lm(Affectionate~., data = affectionate_dog_data)
+
+# predicted "affectionate"
+yhat <- predict(linear_fit)
+
+#mean squared error (MSE)
+mean((affectionate_dog_data$Affectionate-yhat)^2)
 ```
 
-Discussion
+The measure of prediction error for the linear regression model for the binary variable `Affectionate` is 0.2072373. 
+
+#### Prediction of Temperament: Friendly
+```{R}
+# predicted "friendly" from all other variables
+linear_fit <- lm(Friendly~., data = friendly_dog_data)
+
+# predicted "friendly"
+yhat <- predict(linear_fit)
+
+#mean squared error (MSE)
+mean((friendly_dog_data$Friendly-yhat)^2)
+```
+
+The measure of prediction error for the linear regression model for the binary variable `Friendly` is 0.1875234. 
+
+#### Cross Validation for Loyal
+```{r}
+set.seed(322)
+k=10
+
+data<-sample_frac(loyal_dog_data) 
+folds <- rep(1:k, length.out=nrow(data)) 
+
+diags<-NULL
+for(i in 1:k){
+  # create training and test sets
+  train<-data[folds!=i,] 
+  test<-data[folds==i,] 
+  truth<-test$Loyal
+
+  # train model
+  fit <- lm(Loyal~., data = train)
+
+  # test model
+  yhat <- predict(fit,newdata=test)
+
+  # get performance metrics for each fold
+  diags<-mean((test$Loyal-yhat)^2) 
+}
+
+# average MSE across all folds
+mean(diags)
+```
+
+The initial estimate for prediction error was 0.1742844, however, cross-validation using k-folds shows that the prediction error is closer to 0.2403649. The increase in prediction error during cross-validation indicates the linear regression model was more erroneous when the model was trained with the entire dataset. This is due to overfitting of the training model onto the given dataset, which learned the quirks of the dataset. However, when applied to smaller test sets, the quirks of the larger dataset do not lend for accurate prediction for normal data observations.  
+
+#### Cross Validation for Affectionate
+```{r}
+set.seed(322)
+k=10
+
+data<-sample_frac(affectionate_dog_data) 
+folds <- rep(1:k, length.out=nrow(data)) 
+
+diags<-NULL
+for(i in 1:k){
+  # create training and test sets
+  train<-data[folds!=i,] 
+  test<-data[folds==i,] 
+  truth<-test$Affectionate
+
+  # train model
+  fit <- lm(Affectionate~., data = train)
+
+  # test model
+  yhat <- predict(fit,newdata=test)
+
+  # get performance metrics for each fold
+  diags<-mean((test$Affectionate-yhat)^2) 
+}
+
+# average MSE across all folds
+mean(diags)
+```
+
+The initial estimate for prediction error was 0.2072373. Unlike the linear regression model for `Loyal`, the cross-validation indicates the prediction error is only 0.1959573, which is less than the estimated prediction error. In this case, there is not overfitting as the trained model on the whole daatset and the k-folds cross-validation are very similar, with the former performing less erroneous than that of the latter. 
+
+#### Cross Validation for Friendly
+```{r}
+set.seed(322)
+k=10
+
+data<-sample_frac(friendly_dog_data) 
+folds <- rep(1:k, length.out=nrow(data)) 
+
+diags<-NULL
+for(i in 1:k){
+  # create training and test sets
+  train<-data[folds!=i,] 
+  test<-data[folds==i,] 
+  truth<-test$Friendly
+
+  # train model
+  fit <- lm(Friendly~., data = train)
+
+  # test model
+  yhat <- predict(fit,newdata=test)
+
+  # get performance metrics for each fold
+  diags<-mean((test$Friendly-yhat)^2) 
+}
+
+# average MSE across all folds
+mean(diags)
+```
+
+The initial estimate for prediction error was 0.1875234, however, the k-folds cross-validation indicates that the prediction error is actually higher, the value being 0.2013954. The increase in prediction error resulted during the cross validation of the linear regression model shows the trained model on the whole dataset was slightly more erroneous than actuality. This further indicates that there is slight overfitting of the model when trained over the entire dataset. That said, overall, the linear regression models for all three binary variables performed fairly well, with low prediction error values. 
 
 ### Python 
 
 ```{R}
 library(reticulate)
+use_python("/usr/bin/python3", required = F)
 ```
 
 ```{python}
-# python code here
+import pandas as pd
+pd.set_option('display.max_columns', None)
+
+dog_data = r.dog_data_wider
+dog_data = dog_data.sort_values(by= ["FirstClassification", "Breed"])
+dog_data.head()
+type(dog_data)
 ```
 
-Discussion
+```{r}
+head(py$dog_data)
+```
 
-### Concluding Remarks
+Here, the R-based dataframe `dog_data_wider` is established as a python [pandas] dataframe. Simple data wrangling is demonstrated on the python dataframe `dog_data` to arrange the observations by FirstClassification and then by Breed name. This python dataframe is then converted back to an R dataframe and run through the head() function. 
 
-Include concluding remarks here, if any
+## Concluding Remarks
+
+*Here's two more of my favorite pictures of my dog HoiSum!*
+
+<img src="HoiSum1.jpg" style=width:40% class="img-square">
+<img src="HoiSum2.jpg" style=width:40% class="img-square">
 
 
 

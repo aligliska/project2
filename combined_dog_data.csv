@@ -1,0 +1,841 @@
+Breed,AvgHeightInches,LowHeightInches,HighHeightInches,AvgWeightLbs,LowWeightLbs,HighWeightLbs,AvgPupPrice,IntelligenceRating,Watchdog,FirstClassification,SecondClassification,Temperament,Indicator,MeanHeight
+Tibetan Mastiff,25,24,26,155,140,170,3000,NA,6,Working,Guardian,Alert,0,25.6904761904762
+Tibetan Mastiff,25,24,26,155,140,170,3000,NA,6,Working,Guardian,Friendly,0,25.6904761904762
+Tibetan Mastiff,25,24,26,155,140,170,3000,NA,6,Working,Guardian,Affectionate,0,25.6904761904762
+Tibetan Mastiff,25,24,26,155,140,170,3000,NA,6,Working,Guardian,Loyal,1,25.6904761904762
+Tibetan Mastiff,25,24,26,155,140,170,3000,NA,6,Working,Guardian,Gentle,0,25.6904761904762
+Tibetan Mastiff,25,24,26,155,140,170,3000,NA,6,Working,Guardian,Independent,0,25.6904761904762
+Tibetan Mastiff,25,24,26,155,140,170,3000,NA,6,Working,Guardian,Protective,1,25.6904761904762
+Tibetan Mastiff,25,24,26,155,140,170,3000,NA,6,Working,Guardian,Playful,0,25.6904761904762
+French Bulldog,11.5,11,12,22.5,17,28,3000,58,3,Non-Sporting,Companion,Alert,1,15
+French Bulldog,11.5,11,12,22.5,17,28,3000,58,3,Non-Sporting,Companion,Friendly,0,15
+French Bulldog,11.5,11,12,22.5,17,28,3000,58,3,Non-Sporting,Companion,Affectionate,1,15
+French Bulldog,11.5,11,12,22.5,17,28,3000,58,3,Non-Sporting,Companion,Loyal,0,15
+French Bulldog,11.5,11,12,22.5,17,28,3000,58,3,Non-Sporting,Companion,Gentle,0,15
+French Bulldog,11.5,11,12,22.5,17,28,3000,58,3,Non-Sporting,Companion,Independent,0,15
+French Bulldog,11.5,11,12,22.5,17,28,3000,58,3,Non-Sporting,Companion,Protective,0,15
+French Bulldog,11.5,11,12,22.5,17,28,3000,58,3,Non-Sporting,Companion,Playful,1,15
+Portuguese Water Dog,21.5,20,23,51,42,60,2650,NA,4,Working,Gun,Alert,0,25.6904761904762
+Portuguese Water Dog,21.5,20,23,51,42,60,2650,NA,4,Working,Gun,Friendly,0,25.6904761904762
+Portuguese Water Dog,21.5,20,23,51,42,60,2650,NA,4,Working,Gun,Affectionate,0,25.6904761904762
+Portuguese Water Dog,21.5,20,23,51,42,60,2650,NA,4,Working,Gun,Loyal,0,25.6904761904762
+Portuguese Water Dog,21.5,20,23,51,42,60,2650,NA,4,Working,Gun,Gentle,0,25.6904761904762
+Portuguese Water Dog,21.5,20,23,51,42,60,2650,NA,4,Working,Gun,Independent,0,25.6904761904762
+Portuguese Water Dog,21.5,20,23,51,42,60,2650,NA,4,Working,Gun,Protective,0,25.6904761904762
+Portuguese Water Dog,21.5,20,23,51,42,60,2650,NA,4,Working,Gun,Playful,0,25.6904761904762
+Sussex Spaniel,15.5,15,16,42.5,40,45,2500,NA,3,Sporting,Gun,Alert,0,21.6078302712161
+Sussex Spaniel,15.5,15,16,42.5,40,45,2500,NA,3,Sporting,Gun,Friendly,1,21.6078302712161
+Sussex Spaniel,15.5,15,16,42.5,40,45,2500,NA,3,Sporting,Gun,Affectionate,0,21.6078302712161
+Sussex Spaniel,15.5,15,16,42.5,40,45,2500,NA,3,Sporting,Gun,Loyal,0,21.6078302712161
+Sussex Spaniel,15.5,15,16,42.5,40,45,2500,NA,3,Sporting,Gun,Gentle,0,21.6078302712161
+Sussex Spaniel,15.5,15,16,42.5,40,45,2500,NA,3,Sporting,Gun,Independent,0,21.6078302712161
+Sussex Spaniel,15.5,15,16,42.5,40,45,2500,NA,3,Sporting,Gun,Protective,0,21.6078302712161
+Sussex Spaniel,15.5,15,16,42.5,40,45,2500,NA,3,Sporting,Gun,Playful,0,21.6078302712161
+Afghan Hound,26,25,27,55,50,60,2250,79,1,Sporting,Sight,Alert,0,21.6078302712161
+Afghan Hound,26,25,27,55,50,60,2250,79,1,Sporting,Sight,Friendly,0,21.6078302712161
+Afghan Hound,26,25,27,55,50,60,2250,79,1,Sporting,Sight,Affectionate,0,21.6078302712161
+Afghan Hound,26,25,27,55,50,60,2250,79,1,Sporting,Sight,Loyal,0,21.6078302712161
+Afghan Hound,26,25,27,55,50,60,2250,79,1,Sporting,Sight,Gentle,0,21.6078302712161
+Afghan Hound,26,25,27,55,50,60,2250,79,1,Sporting,Sight,Independent,1,21.6078302712161
+Afghan Hound,26,25,27,55,50,60,2250,79,1,Sporting,Sight,Protective,0,21.6078302712161
+Afghan Hound,26,25,27,55,50,60,2250,79,1,Sporting,Sight,Playful,0,21.6078302712161
+Black Russian Terrier,27,25,29,110,80,140,2150,NA,6,Working,Guardian,Alert,0,25.6904761904762
+Black Russian Terrier,27,25,29,110,80,140,2150,NA,6,Working,Guardian,Friendly,0,25.6904761904762
+Black Russian Terrier,27,25,29,110,80,140,2150,NA,6,Working,Guardian,Affectionate,0,25.6904761904762
+Black Russian Terrier,27,25,29,110,80,140,2150,NA,6,Working,Guardian,Loyal,0,25.6904761904762
+Black Russian Terrier,27,25,29,110,80,140,2150,NA,6,Working,Guardian,Gentle,0,25.6904761904762
+Black Russian Terrier,27,25,29,110,80,140,2150,NA,6,Working,Guardian,Independent,0,25.6904761904762
+Black Russian Terrier,27,25,29,110,80,140,2150,NA,6,Working,Guardian,Protective,0,25.6904761904762
+Black Russian Terrier,27,25,29,110,80,140,2150,NA,6,Working,Guardian,Playful,0,25.6904761904762
+Irish Wolfhound,31.5,28,35,120,90,150,1900,41,3,Hound,Scenthound,Alert,0,21.8421052631579
+Irish Wolfhound,31.5,28,35,120,90,150,1900,41,3,Hound,Scenthound,Friendly,0,21.8421052631579
+Irish Wolfhound,31.5,28,35,120,90,150,1900,41,3,Hound,Scenthound,Affectionate,0,21.8421052631579
+Irish Wolfhound,31.5,28,35,120,90,150,1900,41,3,Hound,Scenthound,Loyal,1,21.8421052631579
+Irish Wolfhound,31.5,28,35,120,90,150,1900,41,3,Hound,Scenthound,Gentle,0,21.8421052631579
+Irish Wolfhound,31.5,28,35,120,90,150,1900,41,3,Hound,Scenthound,Independent,0,21.8421052631579
+Irish Wolfhound,31.5,28,35,120,90,150,1900,41,3,Hound,Scenthound,Protective,0,21.8421052631579
+Irish Wolfhound,31.5,28,35,120,90,150,1900,41,3,Hound,Scenthound,Playful,0,21.8421052631579
+Pharaoh Hound,23,21,25,50,45,55,1900,37,2,Hound,Sight,Alert,0,21.8421052631579
+Pharaoh Hound,23,21,25,50,45,55,1900,37,2,Hound,Sight,Friendly,0,21.8421052631579
+Pharaoh Hound,23,21,25,50,45,55,1900,37,2,Hound,Sight,Affectionate,1,21.8421052631579
+Pharaoh Hound,23,21,25,50,45,55,1900,37,2,Hound,Sight,Loyal,0,21.8421052631579
+Pharaoh Hound,23,21,25,50,45,55,1900,37,2,Hound,Sight,Gentle,0,21.8421052631579
+Pharaoh Hound,23,21,25,50,45,55,1900,37,2,Hound,Sight,Independent,0,21.8421052631579
+Pharaoh Hound,23,21,25,50,45,55,1900,37,2,Hound,Sight,Protective,0,21.8421052631579
+Pharaoh Hound,23,21,25,50,45,55,1900,37,2,Hound,Sight,Playful,1,21.8421052631579
+Bedlington Terrier,15.5,15,16,20.5,18,23,1900,40,3,Terrier,Terrier2,Alert,0,15.1071428571429
+Bedlington Terrier,15.5,15,16,20.5,18,23,1900,40,3,Terrier,Terrier2,Friendly,0,15.1071428571429
+Bedlington Terrier,15.5,15,16,20.5,18,23,1900,40,3,Terrier,Terrier2,Affectionate,1,15.1071428571429
+Bedlington Terrier,15.5,15,16,20.5,18,23,1900,40,3,Terrier,Terrier2,Loyal,1,15.1071428571429
+Bedlington Terrier,15.5,15,16,20.5,18,23,1900,40,3,Terrier,Terrier2,Gentle,0,15.1071428571429
+Bedlington Terrier,15.5,15,16,20.5,18,23,1900,40,3,Terrier,Terrier2,Independent,0,15.1071428571429
+Bedlington Terrier,15.5,15,16,20.5,18,23,1900,40,3,Terrier,Terrier2,Protective,0,15.1071428571429
+Bedlington Terrier,15.5,15,16,20.5,18,23,1900,40,3,Terrier,Terrier2,Playful,1,15.1071428571429
+Weimaraner,26,25,27,77.5,70,85,1750,21,3,Sporting,Gun,Alert,1,21.6078302712161
+Weimaraner,26,25,27,77.5,70,85,1750,21,3,Sporting,Gun,Friendly,0,21.6078302712161
+Weimaraner,26,25,27,77.5,70,85,1750,21,3,Sporting,Gun,Affectionate,0,21.6078302712161
+Weimaraner,26,25,27,77.5,70,85,1750,21,3,Sporting,Gun,Loyal,0,21.6078302712161
+Weimaraner,26,25,27,77.5,70,85,1750,21,3,Sporting,Gun,Gentle,0,21.6078302712161
+Weimaraner,26,25,27,77.5,70,85,1750,21,3,Sporting,Gun,Independent,0,21.6078302712161
+Weimaraner,26,25,27,77.5,70,85,1750,21,3,Sporting,Gun,Protective,0,21.6078302712161
+Weimaraner,26,25,27,77.5,70,85,1750,21,3,Sporting,Gun,Playful,0,21.6078302712161
+Polish Lowland Sheepdog,18,16,20,32.5,30,35,1750,NA,6,Herding,Herding,Alert,0,21.4375
+Polish Lowland Sheepdog,18,16,20,32.5,30,35,1750,NA,6,Herding,Herding,Friendly,0,21.4375
+Polish Lowland Sheepdog,18,16,20,32.5,30,35,1750,NA,6,Herding,Herding,Affectionate,0,21.4375
+Polish Lowland Sheepdog,18,16,20,32.5,30,35,1750,NA,6,Herding,Herding,Loyal,0,21.4375
+Polish Lowland Sheepdog,18,16,20,32.5,30,35,1750,NA,6,Herding,Herding,Gentle,0,21.4375
+Polish Lowland Sheepdog,18,16,20,32.5,30,35,1750,NA,6,Herding,Herding,Independent,0,21.4375
+Polish Lowland Sheepdog,18,16,20,32.5,30,35,1750,NA,6,Herding,Herding,Protective,0,21.4375
+Polish Lowland Sheepdog,18,16,20,32.5,30,35,1750,NA,6,Herding,Herding,Playful,0,21.4375
+Staffordshire Bull Terrier,15,14,16,26,24,28,1750,49,3,Terrier,Terrier2,Alert,0,15.1071428571429
+Staffordshire Bull Terrier,15,14,16,26,24,28,1750,49,3,Terrier,Terrier2,Friendly,0,15.1071428571429
+Staffordshire Bull Terrier,15,14,16,26,24,28,1750,49,3,Terrier,Terrier2,Affectionate,1,15.1071428571429
+Staffordshire Bull Terrier,15,14,16,26,24,28,1750,49,3,Terrier,Terrier2,Loyal,0,15.1071428571429
+Staffordshire Bull Terrier,15,14,16,26,24,28,1750,49,3,Terrier,Terrier2,Gentle,0,15.1071428571429
+Staffordshire Bull Terrier,15,14,16,26,24,28,1750,49,3,Terrier,Terrier2,Independent,0,15.1071428571429
+Staffordshire Bull Terrier,15,14,16,26,24,28,1750,49,3,Terrier,Terrier2,Protective,0,15.1071428571429
+Staffordshire Bull Terrier,15,14,16,26,24,28,1750,49,3,Terrier,Terrier2,Playful,0,15.1071428571429
+Saint Bernard,26.5,25,28,150,110,190,1650,65,3,Working,Guardian,Alert,0,25.6904761904762
+Saint Bernard,26.5,25,28,150,110,190,1650,65,3,Working,Guardian,Friendly,1,25.6904761904762
+Saint Bernard,26.5,25,28,150,110,190,1650,65,3,Working,Guardian,Affectionate,0,25.6904761904762
+Saint Bernard,26.5,25,28,150,110,190,1650,65,3,Working,Guardian,Loyal,0,25.6904761904762
+Saint Bernard,26.5,25,28,150,110,190,1650,65,3,Working,Guardian,Gentle,1,25.6904761904762
+Saint Bernard,26.5,25,28,150,110,190,1650,65,3,Working,Guardian,Independent,1,25.6904761904762
+Saint Bernard,26.5,25,28,150,110,190,1650,65,3,Working,Guardian,Protective,0,25.6904761904762
+Saint Bernard,26.5,25,28,150,110,190,1650,65,3,Working,Guardian,Playful,0,25.6904761904762
+Rottweiler,24.5,22,27,100,90,110,1600,9,6,Working,Guardian,Alert,1,25.6904761904762
+Rottweiler,24.5,22,27,100,90,110,1600,9,6,Working,Guardian,Friendly,0,25.6904761904762
+Rottweiler,24.5,22,27,100,90,110,1600,9,6,Working,Guardian,Affectionate,0,25.6904761904762
+Rottweiler,24.5,22,27,100,90,110,1600,9,6,Working,Guardian,Loyal,1,25.6904761904762
+Rottweiler,24.5,22,27,100,90,110,1600,9,6,Working,Guardian,Gentle,0,25.6904761904762
+Rottweiler,24.5,22,27,100,90,110,1600,9,6,Working,Guardian,Independent,1,25.6904761904762
+Rottweiler,24.5,22,27,100,90,110,1600,9,6,Working,Guardian,Protective,1,25.6904761904762
+Rottweiler,24.5,22,27,100,90,110,1600,9,6,Working,Guardian,Playful,0,25.6904761904762
+Tibetan Terrier,15.5,14,17,25,20,30,1600,62,3,Non-Sporting,Companion,Alert,0,15
+Tibetan Terrier,15.5,14,17,25,20,30,1600,62,3,Non-Sporting,Companion,Friendly,0,15
+Tibetan Terrier,15.5,14,17,25,20,30,1600,62,3,Non-Sporting,Companion,Affectionate,1,15
+Tibetan Terrier,15.5,14,17,25,20,30,1600,62,3,Non-Sporting,Companion,Loyal,0,15
+Tibetan Terrier,15.5,14,17,25,20,30,1600,62,3,Non-Sporting,Companion,Gentle,1,15
+Tibetan Terrier,15.5,14,17,25,20,30,1600,62,3,Non-Sporting,Companion,Independent,0,15
+Tibetan Terrier,15.5,14,17,25,20,30,1600,62,3,Non-Sporting,Companion,Protective,0,15
+Tibetan Terrier,15.5,14,17,25,20,30,1600,62,3,Non-Sporting,Companion,Playful,0,15
+Golden Retriever,22.5,21,24,65,55,75,1500,4,3,Sporting,Gun,Alert,0,21.6078302712161
+Golden Retriever,22.5,21,24,65,55,75,1500,4,3,Sporting,Gun,Friendly,1,21.6078302712161
+Golden Retriever,22.5,21,24,65,55,75,1500,4,3,Sporting,Gun,Affectionate,0,21.6078302712161
+Golden Retriever,22.5,21,24,65,55,75,1500,4,3,Sporting,Gun,Loyal,0,21.6078302712161
+Golden Retriever,22.5,21,24,65,55,75,1500,4,3,Sporting,Gun,Gentle,0,21.6078302712161
+Golden Retriever,22.5,21,24,65,55,75,1500,4,3,Sporting,Gun,Independent,0,21.6078302712161
+Golden Retriever,22.5,21,24,65,55,75,1500,4,3,Sporting,Gun,Protective,0,21.6078302712161
+Golden Retriever,22.5,21,24,65,55,75,1500,4,3,Sporting,Gun,Playful,0,21.6078302712161
+Labrador Retriever,22.5,21,24,67.5,55,80,1500,7,3,Sporting,Gun,Alert,1,21.6078302712161
+Labrador Retriever,22.5,21,24,67.5,55,80,1500,7,3,Sporting,Gun,Friendly,1,21.6078302712161
+Labrador Retriever,22.5,21,24,67.5,55,80,1500,7,3,Sporting,Gun,Affectionate,1,21.6078302712161
+Labrador Retriever,22.5,21,24,67.5,55,80,1500,7,3,Sporting,Gun,Loyal,1,21.6078302712161
+Labrador Retriever,22.5,21,24,67.5,55,80,1500,7,3,Sporting,Gun,Gentle,1,21.6078302712161
+Labrador Retriever,22.5,21,24,67.5,55,80,1500,7,3,Sporting,Gun,Independent,0,21.6078302712161
+Labrador Retriever,22.5,21,24,67.5,55,80,1500,7,3,Sporting,Gun,Protective,0,21.6078302712161
+Labrador Retriever,22.5,21,24,67.5,55,80,1500,7,3,Sporting,Gun,Playful,1,21.6078302712161
+German Pinscher,17.5,16,19,30,25,35,1500,NA,6,Working,Terrier2,Alert,0,25.6904761904762
+German Pinscher,17.5,16,19,30,25,35,1500,NA,6,Working,Terrier2,Friendly,0,25.6904761904762
+German Pinscher,17.5,16,19,30,25,35,1500,NA,6,Working,Terrier2,Affectionate,0,25.6904761904762
+German Pinscher,17.5,16,19,30,25,35,1500,NA,6,Working,Terrier2,Loyal,0,25.6904761904762
+German Pinscher,17.5,16,19,30,25,35,1500,NA,6,Working,Terrier2,Gentle,0,25.6904761904762
+German Pinscher,17.5,16,19,30,25,35,1500,NA,6,Working,Terrier2,Independent,0,25.6904761904762
+German Pinscher,17.5,16,19,30,25,35,1500,NA,6,Working,Terrier2,Protective,0,25.6904761904762
+German Pinscher,17.5,16,19,30,25,35,1500,NA,6,Working,Terrier2,Playful,0,25.6904761904762
+Lakeland Terrier,13.5,13,14,16,15,17,1500,62,3,Terrier,Terrier2,Alert,0,15.1071428571429
+Lakeland Terrier,13.5,13,14,16,15,17,1500,62,3,Terrier,Terrier2,Friendly,1,15.1071428571429
+Lakeland Terrier,13.5,13,14,16,15,17,1500,62,3,Terrier,Terrier2,Affectionate,0,15.1071428571429
+Lakeland Terrier,13.5,13,14,16,15,17,1500,62,3,Terrier,Terrier2,Loyal,0,15.1071428571429
+Lakeland Terrier,13.5,13,14,16,15,17,1500,62,3,Terrier,Terrier2,Gentle,0,15.1071428571429
+Lakeland Terrier,13.5,13,14,16,15,17,1500,62,3,Terrier,Terrier2,Independent,1,15.1071428571429
+Lakeland Terrier,13.5,13,14,16,15,17,1500,62,3,Terrier,Terrier2,Protective,0,15.1071428571429
+Lakeland Terrier,13.5,13,14,16,15,17,1500,62,3,Terrier,Terrier2,Playful,0,15.1071428571429
+German Shepherd Dog,24,22,26,82.5,75,90,1400,3,6,Herding,Herding,Alert,1,21.4375
+German Shepherd Dog,24,22,26,82.5,75,90,1400,3,6,Herding,Herding,Friendly,0,21.4375
+German Shepherd Dog,24,22,26,82.5,75,90,1400,3,6,Herding,Herding,Affectionate,0,21.4375
+German Shepherd Dog,24,22,26,82.5,75,90,1400,3,6,Herding,Herding,Loyal,1,21.4375
+German Shepherd Dog,24,22,26,82.5,75,90,1400,3,6,Herding,Herding,Gentle,0,21.4375
+German Shepherd Dog,24,22,26,82.5,75,90,1400,3,6,Herding,Herding,Independent,0,21.4375
+German Shepherd Dog,24,22,26,82.5,75,90,1400,3,6,Herding,Herding,Protective,0,21.4375
+German Shepherd Dog,24,22,26,82.5,75,90,1400,3,6,Herding,Herding,Playful,0,21.4375
+Petit Basset Griffon Vendeen,14,13,15,35,30,40,1400,62,3,Hound,Scenthound,Alert,0,21.8421052631579
+Petit Basset Griffon Vendeen,14,13,15,35,30,40,1400,62,3,Hound,Scenthound,Friendly,1,21.8421052631579
+Petit Basset Griffon Vendeen,14,13,15,35,30,40,1400,62,3,Hound,Scenthound,Affectionate,0,21.8421052631579
+Petit Basset Griffon Vendeen,14,13,15,35,30,40,1400,62,3,Hound,Scenthound,Loyal,0,21.8421052631579
+Petit Basset Griffon Vendeen,14,13,15,35,30,40,1400,62,3,Hound,Scenthound,Gentle,0,21.8421052631579
+Petit Basset Griffon Vendeen,14,13,15,35,30,40,1400,62,3,Hound,Scenthound,Independent,1,21.8421052631579
+Petit Basset Griffon Vendeen,14,13,15,35,30,40,1400,62,3,Hound,Scenthound,Protective,0,21.8421052631579
+Petit Basset Griffon Vendeen,14,13,15,35,30,40,1400,62,3,Hound,Scenthound,Playful,0,21.8421052631579
+English Toy Spaniel,10,10,10,12,9,15,1400,NA,3,Toy,Companion,Alert,0,10.0714285714286
+English Toy Spaniel,10,10,10,12,9,15,1400,NA,3,Toy,Companion,Friendly,0,10.0714285714286
+English Toy Spaniel,10,10,10,12,9,15,1400,NA,3,Toy,Companion,Affectionate,1,10.0714285714286
+English Toy Spaniel,10,10,10,12,9,15,1400,NA,3,Toy,Companion,Loyal,0,10.0714285714286
+English Toy Spaniel,10,10,10,12,9,15,1400,NA,3,Toy,Companion,Gentle,1,10.0714285714286
+English Toy Spaniel,10,10,10,12,9,15,1400,NA,3,Toy,Companion,Independent,0,10.0714285714286
+English Toy Spaniel,10,10,10,12,9,15,1400,NA,3,Toy,Companion,Protective,0,10.0714285714286
+English Toy Spaniel,10,10,10,12,9,15,1400,NA,3,Toy,Companion,Playful,1,10.0714285714286
+Bullmastiff,26,25,27,115,100,130,1350,69,6,Working,Guardian,Alert,1,25.6904761904762
+Bullmastiff,26,25,27,115,100,130,1350,69,6,Working,Guardian,Friendly,0,25.6904761904762
+Bullmastiff,26,25,27,115,100,130,1350,69,6,Working,Guardian,Affectionate,0,25.6904761904762
+Bullmastiff,26,25,27,115,100,130,1350,69,6,Working,Guardian,Loyal,1,25.6904761904762
+Bullmastiff,26,25,27,115,100,130,1350,69,6,Working,Guardian,Gentle,0,25.6904761904762
+Bullmastiff,26,25,27,115,100,130,1350,69,6,Working,Guardian,Independent,0,25.6904761904762
+Bullmastiff,26,25,27,115,100,130,1350,69,6,Working,Guardian,Protective,1,25.6904761904762
+Bullmastiff,26,25,27,115,100,130,1350,69,6,Working,Guardian,Playful,0,25.6904761904762
+Kuvasz,29,28,30,95,70,120,1350,42,6,Working,Guardian,Alert,0,25.6904761904762
+Kuvasz,29,28,30,95,70,120,1350,42,6,Working,Guardian,Friendly,0,25.6904761904762
+Kuvasz,29,28,30,95,70,120,1350,42,6,Working,Guardian,Affectionate,0,25.6904761904762
+Kuvasz,29,28,30,95,70,120,1350,42,6,Working,Guardian,Loyal,1,25.6904761904762
+Kuvasz,29,28,30,95,70,120,1350,42,6,Working,Guardian,Gentle,0,25.6904761904762
+Kuvasz,29,28,30,95,70,120,1350,42,6,Working,Guardian,Independent,1,25.6904761904762
+Kuvasz,29,28,30,95,70,120,1350,42,6,Working,Guardian,Protective,1,25.6904761904762
+Kuvasz,29,28,30,95,70,120,1350,42,6,Working,Guardian,Playful,0,25.6904761904762
+Mastiff,28.5,27,30,182.5,175,190,1350,72,6,Working,Guardian,Alert,1,25.6904761904762
+Mastiff,28.5,27,30,182.5,175,190,1350,72,6,Working,Guardian,Friendly,0,25.6904761904762
+Mastiff,28.5,27,30,182.5,175,190,1350,72,6,Working,Guardian,Affectionate,1,25.6904761904762
+Mastiff,28.5,27,30,182.5,175,190,1350,72,6,Working,Guardian,Loyal,1,25.6904761904762
+Mastiff,28.5,27,30,182.5,175,190,1350,72,6,Working,Guardian,Gentle,0,25.6904761904762
+Mastiff,28.5,27,30,182.5,175,190,1350,72,6,Working,Guardian,Independent,0,25.6904761904762
+Mastiff,28.5,27,30,182.5,175,190,1350,72,6,Working,Guardian,Protective,1,25.6904761904762
+Mastiff,28.5,27,30,182.5,175,190,1350,72,6,Working,Guardian,Playful,0,25.6904761904762
+Beauceron,25.5,24,27,110,100,120,1350,NA,5,Herding,Herding,Alert,0,21.4375
+Beauceron,25.5,24,27,110,100,120,1350,NA,5,Herding,Herding,Friendly,0,21.4375
+Beauceron,25.5,24,27,110,100,120,1350,NA,5,Herding,Herding,Affectionate,0,21.4375
+Beauceron,25.5,24,27,110,100,120,1350,NA,5,Herding,Herding,Loyal,1,21.4375
+Beauceron,25.5,24,27,110,100,120,1350,NA,5,Herding,Herding,Gentle,0,21.4375
+Beauceron,25.5,24,27,110,100,120,1350,NA,5,Herding,Herding,Independent,0,21.4375
+Beauceron,25.5,24,27,110,100,120,1350,NA,5,Herding,Herding,Protective,1,21.4375
+Beauceron,25.5,24,27,110,100,120,1350,NA,5,Herding,Herding,Playful,0,21.4375
+Bull Terrier,21.5,21,22,60,50,70,1350,66,6,Terrier,Terrier2,Alert,0,15.1071428571429
+Bull Terrier,21.5,21,22,60,50,70,1350,66,6,Terrier,Terrier2,Friendly,0,15.1071428571429
+Bull Terrier,21.5,21,22,60,50,70,1350,66,6,Terrier,Terrier2,Affectionate,0,15.1071428571429
+Bull Terrier,21.5,21,22,60,50,70,1350,66,6,Terrier,Terrier2,Loyal,0,15.1071428571429
+Bull Terrier,21.5,21,22,60,50,70,1350,66,6,Terrier,Terrier2,Gentle,0,15.1071428571429
+Bull Terrier,21.5,21,22,60,50,70,1350,66,6,Terrier,Terrier2,Independent,0,15.1071428571429
+Bull Terrier,21.5,21,22,60,50,70,1350,66,6,Terrier,Terrier2,Protective,1,15.1071428571429
+Bull Terrier,21.5,21,22,60,50,70,1350,66,6,Terrier,Terrier2,Playful,0,15.1071428571429
+Samoyed,21.5,19,24,57.5,50,65,1350,33,4,Working,Northern,Alert,1,25.6904761904762
+Samoyed,21.5,19,24,57.5,50,65,1350,33,4,Working,Northern,Friendly,1,25.6904761904762
+Samoyed,21.5,19,24,57.5,50,65,1350,33,4,Working,Northern,Affectionate,0,25.6904761904762
+Samoyed,21.5,19,24,57.5,50,65,1350,33,4,Working,Northern,Loyal,0,25.6904761904762
+Samoyed,21.5,19,24,57.5,50,65,1350,33,4,Working,Northern,Gentle,0,25.6904761904762
+Samoyed,21.5,19,24,57.5,50,65,1350,33,4,Working,Northern,Independent,0,25.6904761904762
+Samoyed,21.5,19,24,57.5,50,65,1350,33,4,Working,Northern,Protective,0,25.6904761904762
+Samoyed,21.5,19,24,57.5,50,65,1350,33,4,Working,Northern,Playful,1,25.6904761904762
+Cavalier King Charles Spaniel,12.5,10,15,17.5,15,20,1350,44,2,Toy,Companion,Alert,0,10.0714285714286
+Cavalier King Charles Spaniel,12.5,10,15,17.5,15,20,1350,44,2,Toy,Companion,Friendly,0,10.0714285714286
+Cavalier King Charles Spaniel,12.5,10,15,17.5,15,20,1350,44,2,Toy,Companion,Affectionate,1,10.0714285714286
+Cavalier King Charles Spaniel,12.5,10,15,17.5,15,20,1350,44,2,Toy,Companion,Loyal,0,10.0714285714286
+Cavalier King Charles Spaniel,12.5,10,15,17.5,15,20,1350,44,2,Toy,Companion,Gentle,1,10.0714285714286
+Cavalier King Charles Spaniel,12.5,10,15,17.5,15,20,1350,44,2,Toy,Companion,Independent,0,10.0714285714286
+Cavalier King Charles Spaniel,12.5,10,15,17.5,15,20,1350,44,2,Toy,Companion,Protective,0,10.0714285714286
+Cavalier King Charles Spaniel,12.5,10,15,17.5,15,20,1350,44,2,Toy,Companion,Playful,0,10.0714285714286
+Bearded Collie,21,20,22,50,40,60,1300,34,4,Herding,Herding,Alert,1,21.4375
+Bearded Collie,21,20,22,50,40,60,1300,34,4,Herding,Herding,Friendly,0,21.4375
+Bearded Collie,21,20,22,50,40,60,1300,34,4,Herding,Herding,Affectionate,0,21.4375
+Bearded Collie,21,20,22,50,40,60,1300,34,4,Herding,Herding,Loyal,0,21.4375
+Bearded Collie,21,20,22,50,40,60,1300,34,4,Herding,Herding,Gentle,0,21.4375
+Bearded Collie,21,20,22,50,40,60,1300,34,4,Herding,Herding,Independent,0,21.4375
+Bearded Collie,21,20,22,50,40,60,1300,34,4,Herding,Herding,Protective,0,21.4375
+Bearded Collie,21,20,22,50,40,60,1300,34,4,Herding,Herding,Playful,0,21.4375
+Welsh Springer Spaniel,17.5,16,19,40,35,45,1300,31,4,Sporting,Gun,Alert,0,21.6078302712161
+Welsh Springer Spaniel,17.5,16,19,40,35,45,1300,31,4,Sporting,Gun,Friendly,1,21.6078302712161
+Welsh Springer Spaniel,17.5,16,19,40,35,45,1300,31,4,Sporting,Gun,Affectionate,1,21.6078302712161
+Welsh Springer Spaniel,17.5,16,19,40,35,45,1300,31,4,Sporting,Gun,Loyal,1,21.6078302712161
+Welsh Springer Spaniel,17.5,16,19,40,35,45,1300,31,4,Sporting,Gun,Gentle,0,21.6078302712161
+Welsh Springer Spaniel,17.5,16,19,40,35,45,1300,31,4,Sporting,Gun,Independent,0,21.6078302712161
+Welsh Springer Spaniel,17.5,16,19,40,35,45,1300,31,4,Sporting,Gun,Protective,0,21.6078302712161
+Welsh Springer Spaniel,17.5,16,19,40,35,45,1300,31,4,Sporting,Gun,Playful,1,21.6078302712161
+Border Terrier,13.5,12,15,13.5,12,15,1300,30,4,Terrier,Terrier2,Alert,1,15.1071428571429
+Border Terrier,13.5,12,15,13.5,12,15,1300,30,4,Terrier,Terrier2,Friendly,0,15.1071428571429
+Border Terrier,13.5,12,15,13.5,12,15,1300,30,4,Terrier,Terrier2,Affectionate,1,15.1071428571429
+Border Terrier,13.5,12,15,13.5,12,15,1300,30,4,Terrier,Terrier2,Loyal,0,15.1071428571429
+Border Terrier,13.5,12,15,13.5,12,15,1300,30,4,Terrier,Terrier2,Gentle,0,15.1071428571429
+Border Terrier,13.5,12,15,13.5,12,15,1300,30,4,Terrier,Terrier2,Independent,0,15.1071428571429
+Border Terrier,13.5,12,15,13.5,12,15,1300,30,4,Terrier,Terrier2,Protective,0,15.1071428571429
+Border Terrier,13.5,12,15,13.5,12,15,1300,30,4,Terrier,Terrier2,Playful,0,15.1071428571429
+Giant Schnauzer,26.5,25,28,72.5,70,75,1250,28,6,Working,Companion,Alert,0,25.6904761904762
+Giant Schnauzer,26.5,25,28,72.5,70,75,1250,28,6,Working,Companion,Friendly,0,25.6904761904762
+Giant Schnauzer,26.5,25,28,72.5,70,75,1250,28,6,Working,Companion,Affectionate,0,25.6904761904762
+Giant Schnauzer,26.5,25,28,72.5,70,75,1250,28,6,Working,Companion,Loyal,1,25.6904761904762
+Giant Schnauzer,26.5,25,28,72.5,70,75,1250,28,6,Working,Companion,Gentle,0,25.6904761904762
+Giant Schnauzer,26.5,25,28,72.5,70,75,1250,28,6,Working,Companion,Independent,0,25.6904761904762
+Giant Schnauzer,26.5,25,28,72.5,70,75,1250,28,6,Working,Companion,Protective,0,25.6904761904762
+Giant Schnauzer,26.5,25,28,72.5,70,75,1250,28,6,Working,Companion,Playful,0,25.6904761904762
+Giant Schnauzer,26.5,25,28,72.5,70,75,1250,NA,NA,Working,Herding,Alert,0,25.6904761904762
+Giant Schnauzer,26.5,25,28,72.5,70,75,1250,NA,NA,Working,Herding,Friendly,0,25.6904761904762
+Giant Schnauzer,26.5,25,28,72.5,70,75,1250,NA,NA,Working,Herding,Affectionate,0,25.6904761904762
+Giant Schnauzer,26.5,25,28,72.5,70,75,1250,NA,NA,Working,Herding,Loyal,0,25.6904761904762
+Giant Schnauzer,26.5,25,28,72.5,70,75,1250,NA,NA,Working,Herding,Gentle,0,25.6904761904762
+Giant Schnauzer,26.5,25,28,72.5,70,75,1250,NA,NA,Working,Herding,Independent,0,25.6904761904762
+Giant Schnauzer,26.5,25,28,72.5,70,75,1250,NA,NA,Working,Herding,Protective,0,25.6904761904762
+Giant Schnauzer,26.5,25,28,72.5,70,75,1250,NA,NA,Working,Herding,Playful,1,25.6904761904762
+Australian Terrier,10,10,10,12,10,14,1250,34,3,Terrier,Terrier2,Alert,1,15.1071428571429
+Australian Terrier,10,10,10,12,10,14,1250,34,3,Terrier,Terrier2,Friendly,0,15.1071428571429
+Australian Terrier,10,10,10,12,10,14,1250,34,3,Terrier,Terrier2,Affectionate,0,15.1071428571429
+Australian Terrier,10,10,10,12,10,14,1250,34,3,Terrier,Terrier2,Loyal,1,15.1071428571429
+Australian Terrier,10,10,10,12,10,14,1250,34,3,Terrier,Terrier2,Gentle,0,15.1071428571429
+Australian Terrier,10,10,10,12,10,14,1250,34,3,Terrier,Terrier2,Independent,0,15.1071428571429
+Australian Terrier,10,10,10,12,10,14,1250,34,3,Terrier,Terrier2,Protective,0,15.1071428571429
+Australian Terrier,10,10,10,12,10,14,1250,34,3,Terrier,Terrier2,Playful,0,15.1071428571429
+Rhodesian Ridgeback,25.5,24,27,77.5,70,85,1150,52,3,Hound,Sight,Alert,0,21.8421052631579
+Rhodesian Ridgeback,25.5,24,27,77.5,70,85,1150,52,3,Hound,Sight,Friendly,0,21.8421052631579
+Rhodesian Ridgeback,25.5,24,27,77.5,70,85,1150,52,3,Hound,Sight,Affectionate,0,21.8421052631579
+Rhodesian Ridgeback,25.5,24,27,77.5,70,85,1150,52,3,Hound,Sight,Loyal,1,21.8421052631579
+Rhodesian Ridgeback,25.5,24,27,77.5,70,85,1150,52,3,Hound,Sight,Gentle,0,21.8421052631579
+Rhodesian Ridgeback,25.5,24,27,77.5,70,85,1150,52,3,Hound,Sight,Independent,0,21.8421052631579
+Rhodesian Ridgeback,25.5,24,27,77.5,70,85,1150,52,3,Hound,Sight,Protective,0,21.8421052631579
+Rhodesian Ridgeback,25.5,24,27,77.5,70,85,1150,52,3,Hound,Sight,Playful,0,21.8421052631579
+Borzoi,27,26,28,85,70,100,1100,75,1,Hound,Sight,Alert,0,21.8421052631579
+Borzoi,27,26,28,85,70,100,1100,75,1,Hound,Sight,Friendly,0,21.8421052631579
+Borzoi,27,26,28,85,70,100,1100,75,1,Hound,Sight,Affectionate,0,21.8421052631579
+Borzoi,27,26,28,85,70,100,1100,75,1,Hound,Sight,Loyal,0,21.8421052631579
+Borzoi,27,26,28,85,70,100,1100,75,1,Hound,Sight,Gentle,1,21.8421052631579
+Borzoi,27,26,28,85,70,100,1100,75,1,Hound,Sight,Independent,1,21.8421052631579
+Borzoi,27,26,28,85,70,100,1100,75,1,Hound,Sight,Protective,0,21.8421052631579
+Borzoi,27,26,28,85,70,100,1100,75,1,Hound,Sight,Playful,0,21.8421052631579
+Briard,25,23,27,75,74,76,1100,30,6,Herding,Gun,Alert,0,21.4375
+Briard,25,23,27,75,74,76,1100,30,6,Herding,Gun,Friendly,0,21.4375
+Briard,25,23,27,75,74,76,1100,30,6,Herding,Gun,Affectionate,0,21.4375
+Briard,25,23,27,75,74,76,1100,30,6,Herding,Gun,Loyal,1,21.4375
+Briard,25,23,27,75,74,76,1100,30,6,Herding,Gun,Gentle,0,21.4375
+Briard,25,23,27,75,74,76,1100,30,6,Herding,Gun,Independent,0,21.4375
+Briard,25,23,27,75,74,76,1100,30,6,Herding,Gun,Protective,1,21.4375
+Briard,25,23,27,75,74,76,1100,30,6,Herding,Gun,Playful,0,21.4375
+Scottish Deerhound,30,28,32,92.5,75,110,1100,47,1,Hound,Sight,Alert,0,21.8421052631579
+Scottish Deerhound,30,28,32,92.5,75,110,1100,47,1,Hound,Sight,Friendly,1,21.8421052631579
+Scottish Deerhound,30,28,32,92.5,75,110,1100,47,1,Hound,Sight,Affectionate,0,21.8421052631579
+Scottish Deerhound,30,28,32,92.5,75,110,1100,47,1,Hound,Sight,Loyal,0,21.8421052631579
+Scottish Deerhound,30,28,32,92.5,75,110,1100,47,1,Hound,Sight,Gentle,1,21.8421052631579
+Scottish Deerhound,30,28,32,92.5,75,110,1100,47,1,Hound,Sight,Independent,0,21.8421052631579
+Scottish Deerhound,30,28,32,92.5,75,110,1100,47,1,Hound,Sight,Protective,0,21.8421052631579
+Scottish Deerhound,30,28,32,92.5,75,110,1100,47,1,Hound,Sight,Playful,0,21.8421052631579
+Basenji,17,17,17,21,20,22,1100,78,5,Hound,Sight,Alert,1,21.8421052631579
+Basenji,17,17,17,21,20,22,1100,78,5,Hound,Sight,Friendly,0,21.8421052631579
+Basenji,17,17,17,21,20,22,1100,78,5,Hound,Sight,Affectionate,1,21.8421052631579
+Basenji,17,17,17,21,20,22,1100,78,5,Hound,Sight,Loyal,0,21.8421052631579
+Basenji,17,17,17,21,20,22,1100,78,5,Hound,Sight,Gentle,0,21.8421052631579
+Basenji,17,17,17,21,20,22,1100,78,5,Hound,Sight,Independent,0,21.8421052631579
+Basenji,17,17,17,21,20,22,1100,78,5,Hound,Sight,Protective,0,21.8421052631579
+Basenji,17,17,17,21,20,22,1100,78,5,Hound,Sight,Playful,1,21.8421052631579
+Puli,16.5,16,17,31,29,33,1100,27,5,Herding,Herding,Alert,0,21.4375
+Puli,16.5,16,17,31,29,33,1100,27,5,Herding,Herding,Friendly,0,21.4375
+Puli,16.5,16,17,31,29,33,1100,27,5,Herding,Herding,Affectionate,0,21.4375
+Puli,16.5,16,17,31,29,33,1100,27,5,Herding,Herding,Loyal,1,21.4375
+Puli,16.5,16,17,31,29,33,1100,27,5,Herding,Herding,Gentle,0,21.4375
+Puli,16.5,16,17,31,29,33,1100,27,5,Herding,Herding,Independent,0,21.4375
+Puli,16.5,16,17,31,29,33,1100,27,5,Herding,Herding,Protective,0,21.4375
+Puli,16.5,16,17,31,29,33,1100,27,5,Herding,Herding,Playful,0,21.4375
+Akita,27,26,28,100,80,120,1000,54,5,Working,Herding,Alert,1,25.6904761904762
+Akita,27,26,28,100,80,120,1000,54,5,Working,Herding,Friendly,1,25.6904761904762
+Akita,27,26,28,100,80,120,1000,54,5,Working,Herding,Affectionate,0,25.6904761904762
+Akita,27,26,28,100,80,120,1000,54,5,Working,Herding,Loyal,0,25.6904761904762
+Akita,27,26,28,100,80,120,1000,54,5,Working,Herding,Gentle,0,25.6904761904762
+Akita,27,26,28,100,80,120,1000,54,5,Working,Herding,Independent,0,25.6904761904762
+Akita,27,26,28,100,80,120,1000,54,5,Working,Herding,Protective,0,25.6904761904762
+Akita,27,26,28,100,80,120,1000,54,5,Working,Herding,Playful,0,25.6904761904762
+Bloodhound,25,24,26,100,80,120,1000,74,1,Hound,Scenthound,Alert,0,21.8421052631579
+Bloodhound,25,24,26,100,80,120,1000,74,1,Hound,Scenthound,Friendly,0,21.8421052631579
+Bloodhound,25,24,26,100,80,120,1000,74,1,Hound,Scenthound,Affectionate,1,21.8421052631579
+Bloodhound,25,24,26,100,80,120,1000,74,1,Hound,Scenthound,Loyal,0,21.8421052631579
+Bloodhound,25,24,26,100,80,120,1000,74,1,Hound,Scenthound,Gentle,1,21.8421052631579
+Bloodhound,25,24,26,100,80,120,1000,74,1,Hound,Scenthound,Independent,1,21.8421052631579
+Bloodhound,25,24,26,100,80,120,1000,74,1,Hound,Scenthound,Protective,0,21.8421052631579
+Bloodhound,25,24,26,100,80,120,1000,74,1,Hound,Scenthound,Playful,0,21.8421052631579
+Great Dane,32,32,32,140,120,160,1000,48,5,Working,Guardian,Alert,0,25.6904761904762
+Great Dane,32,32,32,140,120,160,1000,48,5,Working,Guardian,Friendly,1,25.6904761904762
+Great Dane,32,32,32,140,120,160,1000,48,5,Working,Guardian,Affectionate,0,25.6904761904762
+Great Dane,32,32,32,140,120,160,1000,48,5,Working,Guardian,Loyal,0,25.6904761904762
+Great Dane,32,32,32,140,120,160,1000,48,5,Working,Guardian,Gentle,1,25.6904761904762
+Great Dane,32,32,32,140,120,160,1000,48,5,Working,Guardian,Independent,0,25.6904761904762
+Great Dane,32,32,32,140,120,160,1000,48,5,Working,Guardian,Protective,0,25.6904761904762
+Great Dane,32,32,32,140,120,160,1000,48,5,Working,Guardian,Playful,0,25.6904761904762
+Clumber Spaniel,19.5,19,20,50,35,65,1000,37,3,Sporting,Gun,Alert,0,21.6078302712161
+Clumber Spaniel,19.5,19,20,50,35,65,1000,37,3,Sporting,Gun,Friendly,0,21.6078302712161
+Clumber Spaniel,19.5,19,20,50,35,65,1000,37,3,Sporting,Gun,Affectionate,1,21.6078302712161
+Clumber Spaniel,19.5,19,20,50,35,65,1000,37,3,Sporting,Gun,Loyal,1,21.6078302712161
+Clumber Spaniel,19.5,19,20,50,35,65,1000,37,3,Sporting,Gun,Gentle,1,21.6078302712161
+Clumber Spaniel,19.5,19,20,50,35,65,1000,37,3,Sporting,Gun,Independent,0,21.6078302712161
+Clumber Spaniel,19.5,19,20,50,35,65,1000,37,3,Sporting,Gun,Protective,0,21.6078302712161
+Clumber Spaniel,19.5,19,20,50,35,65,1000,37,3,Sporting,Gun,Playful,0,21.6078302712161
+Komondor,31,26.5,35.5,107.5,80,135,1000,NA,6,Working,Guardian,Alert,0,25.6904761904762
+Komondor,31,26.5,35.5,107.5,80,135,1000,NA,6,Working,Guardian,Friendly,0,25.6904761904762
+Komondor,31,26.5,35.5,107.5,80,135,1000,NA,6,Working,Guardian,Affectionate,1,25.6904761904762
+Komondor,31,26.5,35.5,107.5,80,135,1000,NA,6,Working,Guardian,Loyal,0,25.6904761904762
+Komondor,31,26.5,35.5,107.5,80,135,1000,NA,6,Working,Guardian,Gentle,1,25.6904761904762
+Komondor,31,26.5,35.5,107.5,80,135,1000,NA,6,Working,Guardian,Independent,1,25.6904761904762
+Komondor,31,26.5,35.5,107.5,80,135,1000,NA,6,Working,Guardian,Protective,0,25.6904761904762
+Komondor,31,26.5,35.5,107.5,80,135,1000,NA,6,Working,Guardian,Playful,0,25.6904761904762
+Canaan Dog,21.5,19,24,45,35,55,1000,NA,3,Herding,Sight,Alert,1,21.4375
+Canaan Dog,21.5,19,24,45,35,55,1000,NA,3,Herding,Sight,Friendly,0,21.4375
+Canaan Dog,21.5,19,24,45,35,55,1000,NA,3,Herding,Sight,Affectionate,0,21.4375
+Canaan Dog,21.5,19,24,45,35,55,1000,NA,3,Herding,Sight,Loyal,0,21.4375
+Canaan Dog,21.5,19,24,45,35,55,1000,NA,3,Herding,Sight,Gentle,0,21.4375
+Canaan Dog,21.5,19,24,45,35,55,1000,NA,3,Herding,Sight,Independent,0,21.4375
+Canaan Dog,21.5,19,24,45,35,55,1000,NA,3,Herding,Sight,Protective,0,21.4375
+Canaan Dog,21.5,19,24,45,35,55,1000,NA,3,Herding,Sight,Playful,0,21.4375
+Ibizan Hound,25.5,22,29,48.5,42,55,1000,53,3,Hound,Sight,Alert,0,21.8421052631579
+Ibizan Hound,25.5,22,29,48.5,42,55,1000,53,3,Hound,Sight,Friendly,0,21.8421052631579
+Ibizan Hound,25.5,22,29,48.5,42,55,1000,53,3,Hound,Sight,Affectionate,0,21.8421052631579
+Ibizan Hound,25.5,22,29,48.5,42,55,1000,53,3,Hound,Sight,Loyal,0,21.8421052631579
+Ibizan Hound,25.5,22,29,48.5,42,55,1000,53,3,Hound,Sight,Gentle,0,21.8421052631579
+Ibizan Hound,25.5,22,29,48.5,42,55,1000,53,3,Hound,Sight,Independent,1,21.8421052631579
+Ibizan Hound,25.5,22,29,48.5,42,55,1000,53,3,Hound,Sight,Protective,0,21.8421052631579
+Ibizan Hound,25.5,22,29,48.5,42,55,1000,53,3,Hound,Sight,Playful,0,21.8421052631579
+Shih Tzu,9.5,8,11,12.5,9,16,1000,70,3,Toy,Companion,Alert,0,10.0714285714286
+Shih Tzu,9.5,8,11,12.5,9,16,1000,70,3,Toy,Companion,Friendly,1,10.0714285714286
+Shih Tzu,9.5,8,11,12.5,9,16,1000,70,3,Toy,Companion,Affectionate,0,10.0714285714286
+Shih Tzu,9.5,8,11,12.5,9,16,1000,70,3,Toy,Companion,Loyal,0,10.0714285714286
+Shih Tzu,9.5,8,11,12.5,9,16,1000,70,3,Toy,Companion,Gentle,1,10.0714285714286
+Shih Tzu,9.5,8,11,12.5,9,16,1000,70,3,Toy,Companion,Independent,0,10.0714285714286
+Shih Tzu,9.5,8,11,12.5,9,16,1000,70,3,Toy,Companion,Protective,0,10.0714285714286
+Shih Tzu,9.5,8,11,12.5,9,16,1000,70,3,Toy,Companion,Playful,1,10.0714285714286
+Welsh Terrier,15,15,15,20.5,20,21,1000,53,3,Terrier,Terrier2,Alert,1,15.1071428571429
+Welsh Terrier,15,15,15,20.5,20,21,1000,53,3,Terrier,Terrier2,Friendly,1,15.1071428571429
+Welsh Terrier,15,15,15,20.5,20,21,1000,53,3,Terrier,Terrier2,Affectionate,0,15.1071428571429
+Welsh Terrier,15,15,15,20.5,20,21,1000,53,3,Terrier,Terrier2,Loyal,0,15.1071428571429
+Welsh Terrier,15,15,15,20.5,20,21,1000,53,3,Terrier,Terrier2,Gentle,0,15.1071428571429
+Welsh Terrier,15,15,15,20.5,20,21,1000,53,3,Terrier,Terrier2,Independent,1,15.1071428571429
+Welsh Terrier,15,15,15,20.5,20,21,1000,53,3,Terrier,Terrier2,Protective,0,15.1071428571429
+Welsh Terrier,15,15,15,20.5,20,21,1000,53,3,Terrier,Terrier2,Playful,0,15.1071428571429
+Whippet,20,18,22,28.5,27,30,1000,51,3,Hound,Sight,Alert,0,21.8421052631579
+Whippet,20,18,22,28.5,27,30,1000,51,3,Hound,Sight,Friendly,1,21.8421052631579
+Whippet,20,18,22,28.5,27,30,1000,51,3,Hound,Sight,Affectionate,1,21.8421052631579
+Whippet,20,18,22,28.5,27,30,1000,51,3,Hound,Sight,Loyal,0,21.8421052631579
+Whippet,20,18,22,28.5,27,30,1000,51,3,Hound,Sight,Gentle,1,21.8421052631579
+Whippet,20,18,22,28.5,27,30,1000,51,3,Hound,Sight,Independent,0,21.8421052631579
+Whippet,20,18,22,28.5,27,30,1000,51,3,Hound,Sight,Protective,0,21.8421052631579
+Whippet,20,18,22,28.5,27,30,1000,51,3,Hound,Sight,Playful,0,21.8421052631579
+Affenpinscher,10.5,9,12,10,8,12,1000,37,1,Toy,Companion,Alert,0,10.0714285714286
+Affenpinscher,10.5,9,12,10,8,12,1000,37,1,Toy,Companion,Friendly,0,10.0714285714286
+Affenpinscher,10.5,9,12,10,8,12,1000,37,1,Toy,Companion,Affectionate,0,10.0714285714286
+Affenpinscher,10.5,9,12,10,8,12,1000,37,1,Toy,Companion,Loyal,0,10.0714285714286
+Affenpinscher,10.5,9,12,10,8,12,1000,37,1,Toy,Companion,Gentle,0,10.0714285714286
+Affenpinscher,10.5,9,12,10,8,12,1000,37,1,Toy,Companion,Independent,0,10.0714285714286
+Affenpinscher,10.5,9,12,10,8,12,1000,37,1,Toy,Companion,Protective,0,10.0714285714286
+Affenpinscher,10.5,9,12,10,8,12,1000,37,1,Toy,Companion,Playful,1,10.0714285714286
+Vizsla,22.4409448818898,18.8976377952756,25.9842519685039,23.5,22,25,1000,NA,3,Sporting,Gun,Alert,0,21.6078302712161
+Vizsla,22.4409448818898,18.8976377952756,25.9842519685039,23.5,22,25,1000,NA,3,Sporting,Gun,Friendly,0,21.6078302712161
+Vizsla,22.4409448818898,18.8976377952756,25.9842519685039,23.5,22,25,1000,NA,3,Sporting,Gun,Affectionate,1,21.6078302712161
+Vizsla,22.4409448818898,18.8976377952756,25.9842519685039,23.5,22,25,1000,NA,3,Sporting,Gun,Loyal,0,21.6078302712161
+Vizsla,22.4409448818898,18.8976377952756,25.9842519685039,23.5,22,25,1000,NA,3,Sporting,Gun,Gentle,1,21.6078302712161
+Vizsla,22.4409448818898,18.8976377952756,25.9842519685039,23.5,22,25,1000,NA,3,Sporting,Gun,Independent,0,21.6078302712161
+Vizsla,22.4409448818898,18.8976377952756,25.9842519685039,23.5,22,25,1000,NA,3,Sporting,Gun,Protective,1,21.6078302712161
+Vizsla,22.4409448818898,18.8976377952756,25.9842519685039,23.5,22,25,1000,NA,3,Sporting,Gun,Playful,1,21.6078302712161
+Siberian Husky,21.5,20,23,50,40,60,950,45,1,Working,Northern,Alert,1,25.6904761904762
+Siberian Husky,21.5,20,23,50,40,60,950,45,1,Working,Northern,Friendly,1,25.6904761904762
+Siberian Husky,21.5,20,23,50,40,60,950,45,1,Working,Northern,Affectionate,0,25.6904761904762
+Siberian Husky,21.5,20,23,50,40,60,950,45,1,Working,Northern,Loyal,0,25.6904761904762
+Siberian Husky,21.5,20,23,50,40,60,950,45,1,Working,Northern,Gentle,1,25.6904761904762
+Siberian Husky,21.5,20,23,50,40,60,950,45,1,Working,Northern,Independent,0,25.6904761904762
+Siberian Husky,21.5,20,23,50,40,60,950,45,1,Working,Northern,Protective,0,25.6904761904762
+Siberian Husky,21.5,20,23,50,40,60,950,45,1,Working,Northern,Playful,0,25.6904761904762
+Bernese Mountain Dog,25,23,27,97.5,85,110,900,22,5,Working,Guardian,Alert,0,25.6904761904762
+Bernese Mountain Dog,25,23,27,97.5,85,110,900,22,5,Working,Guardian,Friendly,0,25.6904761904762
+Bernese Mountain Dog,25,23,27,97.5,85,110,900,22,5,Working,Guardian,Affectionate,1,25.6904761904762
+Bernese Mountain Dog,25,23,27,97.5,85,110,900,22,5,Working,Guardian,Loyal,1,25.6904761904762
+Bernese Mountain Dog,25,23,27,97.5,85,110,900,22,5,Working,Guardian,Gentle,0,25.6904761904762
+Bernese Mountain Dog,25,23,27,97.5,85,110,900,22,5,Working,Guardian,Independent,0,25.6904761904762
+Bernese Mountain Dog,25,23,27,97.5,85,110,900,22,5,Working,Guardian,Protective,0,25.6904761904762
+Bernese Mountain Dog,25,23,27,97.5,85,110,900,22,5,Working,Guardian,Playful,0,25.6904761904762
+Boxer,23,21,25,67.5,65,70,900,49,5,Working,Guardian,Alert,0,25.6904761904762
+Boxer,23,21,25,67.5,65,70,900,49,5,Working,Guardian,Friendly,1,25.6904761904762
+Boxer,23,21,25,67.5,65,70,900,49,5,Working,Guardian,Affectionate,0,25.6904761904762
+Boxer,23,21,25,67.5,65,70,900,49,5,Working,Guardian,Loyal,1,25.6904761904762
+Boxer,23,21,25,67.5,65,70,900,49,5,Working,Guardian,Gentle,0,25.6904761904762
+Boxer,23,21,25,67.5,65,70,900,49,5,Working,Guardian,Independent,0,25.6904761904762
+Boxer,23,21,25,67.5,65,70,900,49,5,Working,Guardian,Protective,0,25.6904761904762
+Boxer,23,21,25,67.5,65,70,900,49,5,Working,Guardian,Playful,1,25.6904761904762
+Doberman Pinscher,27,26,28,80,60,100,900,5,6,Working,Guardian,Alert,1,25.6904761904762
+Doberman Pinscher,27,26,28,80,60,100,900,5,6,Working,Guardian,Friendly,0,25.6904761904762
+Doberman Pinscher,27,26,28,80,60,100,900,5,6,Working,Guardian,Affectionate,0,25.6904761904762
+Doberman Pinscher,27,26,28,80,60,100,900,5,6,Working,Guardian,Loyal,1,25.6904761904762
+Doberman Pinscher,27,26,28,80,60,100,900,5,6,Working,Guardian,Gentle,0,25.6904761904762
+Doberman Pinscher,27,26,28,80,60,100,900,5,6,Working,Guardian,Independent,0,25.6904761904762
+Doberman Pinscher,27,26,28,80,60,100,900,5,6,Working,Guardian,Protective,0,25.6904761904762
+Doberman Pinscher,27,26,28,80,60,100,900,5,6,Working,Guardian,Playful,0,25.6904761904762
+Gordon Setter,25,23,27,62.5,45,80,900,34,4,Sporting,Gun,Alert,1,21.6078302712161
+Gordon Setter,25,23,27,62.5,45,80,900,34,4,Sporting,Gun,Friendly,0,21.6078302712161
+Gordon Setter,25,23,27,62.5,45,80,900,34,4,Sporting,Gun,Affectionate,0,21.6078302712161
+Gordon Setter,25,23,27,62.5,45,80,900,34,4,Sporting,Gun,Loyal,1,21.6078302712161
+Gordon Setter,25,23,27,62.5,45,80,900,34,4,Sporting,Gun,Gentle,0,21.6078302712161
+Gordon Setter,25,23,27,62.5,45,80,900,34,4,Sporting,Gun,Independent,0,21.6078302712161
+Gordon Setter,25,23,27,62.5,45,80,900,34,4,Sporting,Gun,Protective,0,21.6078302712161
+Gordon Setter,25,23,27,62.5,45,80,900,34,4,Sporting,Gun,Playful,0,21.6078302712161
+Irish Setter,26,25,27,65,60,70,900,35,3,Sporting,Gun,Alert,0,21.6078302712161
+Irish Setter,26,25,27,65,60,70,900,35,3,Sporting,Gun,Friendly,0,21.6078302712161
+Irish Setter,26,25,27,65,60,70,900,35,3,Sporting,Gun,Affectionate,1,21.6078302712161
+Irish Setter,26,25,27,65,60,70,900,35,3,Sporting,Gun,Loyal,0,21.6078302712161
+Irish Setter,26,25,27,65,60,70,900,35,3,Sporting,Gun,Gentle,0,21.6078302712161
+Irish Setter,26,25,27,65,60,70,900,35,3,Sporting,Gun,Independent,1,21.6078302712161
+Irish Setter,26,25,27,65,60,70,900,35,3,Sporting,Gun,Protective,0,21.6078302712161
+Irish Setter,26,25,27,65,60,70,900,35,3,Sporting,Gun,Playful,1,21.6078302712161
+American Staffordshire Terrier,18,17,19,45,40,50,900,34,3,Terrier,Terrier2,Alert,0,15.1071428571429
+American Staffordshire Terrier,18,17,19,45,40,50,900,34,3,Terrier,Terrier2,Friendly,1,15.1071428571429
+American Staffordshire Terrier,18,17,19,45,40,50,900,34,3,Terrier,Terrier2,Affectionate,0,15.1071428571429
+American Staffordshire Terrier,18,17,19,45,40,50,900,34,3,Terrier,Terrier2,Loyal,1,15.1071428571429
+American Staffordshire Terrier,18,17,19,45,40,50,900,34,3,Terrier,Terrier2,Gentle,0,15.1071428571429
+American Staffordshire Terrier,18,17,19,45,40,50,900,34,3,Terrier,Terrier2,Independent,0,15.1071428571429
+American Staffordshire Terrier,18,17,19,45,40,50,900,34,3,Terrier,Terrier2,Protective,0,15.1071428571429
+American Staffordshire Terrier,18,17,19,45,40,50,900,34,3,Terrier,Terrier2,Playful,0,15.1071428571429
+American Water Spaniel,16.5,15,18,35,25,45,900,44,4,Sporting,Gun,Alert,0,21.6078302712161
+American Water Spaniel,16.5,15,18,35,25,45,900,44,4,Sporting,Gun,Friendly,1,21.6078302712161
+American Water Spaniel,16.5,15,18,35,25,45,900,44,4,Sporting,Gun,Affectionate,0,21.6078302712161
+American Water Spaniel,16.5,15,18,35,25,45,900,44,4,Sporting,Gun,Loyal,0,21.6078302712161
+American Water Spaniel,16.5,15,18,35,25,45,900,44,4,Sporting,Gun,Gentle,0,21.6078302712161
+American Water Spaniel,16.5,15,18,35,25,45,900,44,4,Sporting,Gun,Independent,0,21.6078302712161
+American Water Spaniel,16.5,15,18,35,25,45,900,44,4,Sporting,Gun,Protective,1,21.6078302712161
+American Water Spaniel,16.5,15,18,35,25,45,900,44,4,Sporting,Gun,Playful,0,21.6078302712161
+Field Spaniel,18,18,18,42.5,35,50,900,34,3,Sporting,Gun,Alert,0,21.6078302712161
+Field Spaniel,18,18,18,42.5,35,50,900,34,3,Sporting,Gun,Friendly,0,21.6078302712161
+Field Spaniel,18,18,18,42.5,35,50,900,34,3,Sporting,Gun,Affectionate,0,21.6078302712161
+Field Spaniel,18,18,18,42.5,35,50,900,34,3,Sporting,Gun,Loyal,0,21.6078302712161
+Field Spaniel,18,18,18,42.5,35,50,900,34,3,Sporting,Gun,Gentle,0,21.6078302712161
+Field Spaniel,18,18,18,42.5,35,50,900,34,3,Sporting,Gun,Independent,0,21.6078302712161
+Field Spaniel,18,18,18,42.5,35,50,900,34,3,Sporting,Gun,Protective,0,21.6078302712161
+Field Spaniel,18,18,18,42.5,35,50,900,34,3,Sporting,Gun,Playful,0,21.6078302712161
+Irish Water Spaniel,16.5,10,23,55,45,65,900,24,4,Sporting,Gun,Alert,1,21.6078302712161
+Irish Water Spaniel,16.5,10,23,55,45,65,900,24,4,Sporting,Gun,Friendly,0,21.6078302712161
+Irish Water Spaniel,16.5,10,23,55,45,65,900,24,4,Sporting,Gun,Affectionate,0,21.6078302712161
+Irish Water Spaniel,16.5,10,23,55,45,65,900,24,4,Sporting,Gun,Loyal,0,21.6078302712161
+Irish Water Spaniel,16.5,10,23,55,45,65,900,24,4,Sporting,Gun,Gentle,0,21.6078302712161
+Irish Water Spaniel,16.5,10,23,55,45,65,900,24,4,Sporting,Gun,Independent,0,21.6078302712161
+Irish Water Spaniel,16.5,10,23,55,45,65,900,24,4,Sporting,Gun,Protective,0,21.6078302712161
+Irish Water Spaniel,16.5,10,23,55,45,65,900,24,4,Sporting,Gun,Playful,0,21.6078302712161
+Keeshond,18,17,19,42.5,35,50,900,16,4,Non-Sporting,Northern,Alert,0,15
+Keeshond,18,17,19,42.5,35,50,900,16,4,Non-Sporting,Northern,Friendly,0,15
+Keeshond,18,17,19,42.5,35,50,900,16,4,Non-Sporting,Northern,Affectionate,0,15
+Keeshond,18,17,19,42.5,35,50,900,16,4,Non-Sporting,Northern,Loyal,0,15
+Keeshond,18,17,19,42.5,35,50,900,16,4,Non-Sporting,Northern,Gentle,0,15
+Keeshond,18,17,19,42.5,35,50,900,16,4,Non-Sporting,Northern,Independent,0,15
+Keeshond,18,17,19,42.5,35,50,900,16,4,Non-Sporting,Northern,Protective,0,15
+Keeshond,18,17,19,42.5,35,50,900,16,4,Non-Sporting,Northern,Playful,1,15
+Brussels Griffon,7.5,7,8,9,6,12,900,NA,3,Toy,Companion,Alert,1,10.0714285714286
+Brussels Griffon,7.5,7,8,9,6,12,900,NA,3,Toy,Companion,Friendly,0,10.0714285714286
+Brussels Griffon,7.5,7,8,9,6,12,900,NA,3,Toy,Companion,Affectionate,0,10.0714285714286
+Brussels Griffon,7.5,7,8,9,6,12,900,NA,3,Toy,Companion,Loyal,0,10.0714285714286
+Brussels Griffon,7.5,7,8,9,6,12,900,NA,3,Toy,Companion,Gentle,0,10.0714285714286
+Brussels Griffon,7.5,7,8,9,6,12,900,NA,3,Toy,Companion,Independent,0,10.0714285714286
+Brussels Griffon,7.5,7,8,9,6,12,900,NA,3,Toy,Companion,Protective,0,10.0714285714286
+Brussels Griffon,7.5,7,8,9,6,12,900,NA,3,Toy,Companion,Playful,0,10.0714285714286
+Sealyham Terrier,12,12,12,19,18,20,900,56,3,Terrier,Terrier2,Alert,1,15.1071428571429
+Sealyham Terrier,12,12,12,19,18,20,900,56,3,Terrier,Terrier2,Friendly,1,15.1071428571429
+Sealyham Terrier,12,12,12,19,18,20,900,56,3,Terrier,Terrier2,Affectionate,0,15.1071428571429
+Sealyham Terrier,12,12,12,19,18,20,900,56,3,Terrier,Terrier2,Loyal,0,15.1071428571429
+Sealyham Terrier,12,12,12,19,18,20,900,56,3,Terrier,Terrier2,Gentle,0,15.1071428571429
+Sealyham Terrier,12,12,12,19,18,20,900,56,3,Terrier,Terrier2,Independent,0,15.1071428571429
+Sealyham Terrier,12,12,12,19,18,20,900,56,3,Terrier,Terrier2,Protective,0,15.1071428571429
+Sealyham Terrier,12,12,12,19,18,20,900,56,3,Terrier,Terrier2,Playful,0,15.1071428571429
+Shiba Inu,14.5,13,16,22.5,15,30,900,NA,4,Non-Sporting,Companion,Alert,1,15
+Shiba Inu,14.5,13,16,22.5,15,30,900,NA,4,Non-Sporting,Companion,Friendly,0,15
+Shiba Inu,14.5,13,16,22.5,15,30,900,NA,4,Non-Sporting,Companion,Affectionate,0,15
+Shiba Inu,14.5,13,16,22.5,15,30,900,NA,4,Non-Sporting,Companion,Loyal,0,15
+Shiba Inu,14.5,13,16,22.5,15,30,900,NA,4,Non-Sporting,Companion,Gentle,0,15
+Shiba Inu,14.5,13,16,22.5,15,30,900,NA,4,Non-Sporting,Companion,Independent,0,15
+Shiba Inu,14.5,13,16,22.5,15,30,900,NA,4,Non-Sporting,Companion,Protective,0,15
+Shiba Inu,14.5,13,16,22.5,15,30,900,NA,4,Non-Sporting,Companion,Playful,0,15
+Tibetan Spaniel,10,10,10,12,9,15,900,46,4,Non-Sporting,Companion,Alert,0,15
+Tibetan Spaniel,10,10,10,12,9,15,900,46,4,Non-Sporting,Companion,Friendly,0,15
+Tibetan Spaniel,10,10,10,12,9,15,900,46,4,Non-Sporting,Companion,Affectionate,0,15
+Tibetan Spaniel,10,10,10,12,9,15,900,46,4,Non-Sporting,Companion,Loyal,0,15
+Tibetan Spaniel,10,10,10,12,9,15,900,46,4,Non-Sporting,Companion,Gentle,0,15
+Tibetan Spaniel,10,10,10,12,9,15,900,46,4,Non-Sporting,Companion,Independent,1,15
+Tibetan Spaniel,10,10,10,12,9,15,900,46,4,Non-Sporting,Companion,Protective,0,15
+Tibetan Spaniel,10,10,10,12,9,15,900,46,4,Non-Sporting,Companion,Playful,0,15
+Italian Greyhound,13.5,12,15,8,6,10,900,60,3,Toy,Companion,Alert,0,10.0714285714286
+Italian Greyhound,13.5,12,15,8,6,10,900,60,3,Toy,Companion,Friendly,0,10.0714285714286
+Italian Greyhound,13.5,12,15,8,6,10,900,60,3,Toy,Companion,Affectionate,1,10.0714285714286
+Italian Greyhound,13.5,12,15,8,6,10,900,60,3,Toy,Companion,Loyal,0,10.0714285714286
+Italian Greyhound,13.5,12,15,8,6,10,900,60,3,Toy,Companion,Gentle,0,10.0714285714286
+Italian Greyhound,13.5,12,15,8,6,10,900,60,3,Toy,Companion,Independent,0,10.0714285714286
+Italian Greyhound,13.5,12,15,8,6,10,900,60,3,Toy,Companion,Protective,0,10.0714285714286
+Italian Greyhound,13.5,12,15,8,6,10,900,60,3,Toy,Companion,Playful,0,10.0714285714286
+Bichon Frise,10.5,9.5,11.5,14,10,18,850,45,3,Non-Sporting,Companion,Alert,0,15
+Bichon Frise,10.5,9.5,11.5,14,10,18,850,45,3,Non-Sporting,Companion,Friendly,0,15
+Bichon Frise,10.5,9.5,11.5,14,10,18,850,45,3,Non-Sporting,Companion,Affectionate,1,15
+Bichon Frise,10.5,9.5,11.5,14,10,18,850,45,3,Non-Sporting,Companion,Loyal,0,15
+Bichon Frise,10.5,9.5,11.5,14,10,18,850,45,3,Non-Sporting,Companion,Gentle,1,15
+Bichon Frise,10.5,9.5,11.5,14,10,18,850,45,3,Non-Sporting,Companion,Independent,0,15
+Bichon Frise,10.5,9.5,11.5,14,10,18,850,45,3,Non-Sporting,Companion,Protective,0,15
+Bichon Frise,10.5,9.5,11.5,14,10,18,850,45,3,Non-Sporting,Companion,Playful,1,15
+Cairn Terrier,9.5,9,10,14,14,14,850,35,4,Terrier,Terrier2,Alert,0,15.1071428571429
+Cairn Terrier,9.5,9,10,14,14,14,850,35,4,Terrier,Terrier2,Friendly,0,15.1071428571429
+Cairn Terrier,9.5,9,10,14,14,14,850,35,4,Terrier,Terrier2,Affectionate,0,15.1071428571429
+Cairn Terrier,9.5,9,10,14,14,14,850,35,4,Terrier,Terrier2,Loyal,0,15.1071428571429
+Cairn Terrier,9.5,9,10,14,14,14,850,35,4,Terrier,Terrier2,Gentle,0,15.1071428571429
+Cairn Terrier,9.5,9,10,14,14,14,850,35,4,Terrier,Terrier2,Independent,0,15.1071428571429
+Cairn Terrier,9.5,9,10,14,14,14,850,35,4,Terrier,Terrier2,Protective,0,15.1071428571429
+Cairn Terrier,9.5,9,10,14,14,14,850,35,4,Terrier,Terrier2,Playful,0,15.1071428571429
+Great Pyrenees,29.5,27,32,107.5,95,120,800,64,6,Working,Guardian,Alert,0,25.6904761904762
+Great Pyrenees,29.5,27,32,107.5,95,120,800,64,6,Working,Guardian,Friendly,0,25.6904761904762
+Great Pyrenees,29.5,27,32,107.5,95,120,800,64,6,Working,Guardian,Affectionate,1,25.6904761904762
+Great Pyrenees,29.5,27,32,107.5,95,120,800,64,6,Working,Guardian,Loyal,0,25.6904761904762
+Great Pyrenees,29.5,27,32,107.5,95,120,800,64,6,Working,Guardian,Gentle,1,25.6904761904762
+Great Pyrenees,29.5,27,32,107.5,95,120,800,64,6,Working,Guardian,Independent,0,25.6904761904762
+Great Pyrenees,29.5,27,32,107.5,95,120,800,64,6,Working,Guardian,Protective,0,25.6904761904762
+Great Pyrenees,29.5,27,32,107.5,95,120,800,64,6,Working,Guardian,Playful,0,25.6904761904762
+Chesapeake Bay Retriever,23.5,21,26,65,55,75,800,27,3,Sporting,Gun,Alert,0,21.6078302712161
+Chesapeake Bay Retriever,23.5,21,26,65,55,75,800,27,3,Sporting,Gun,Friendly,0,21.6078302712161
+Chesapeake Bay Retriever,23.5,21,26,65,55,75,800,27,3,Sporting,Gun,Affectionate,1,21.6078302712161
+Chesapeake Bay Retriever,23.5,21,26,65,55,75,800,27,3,Sporting,Gun,Loyal,0,21.6078302712161
+Chesapeake Bay Retriever,23.5,21,26,65,55,75,800,27,3,Sporting,Gun,Gentle,0,21.6078302712161
+Chesapeake Bay Retriever,23.5,21,26,65,55,75,800,27,3,Sporting,Gun,Independent,0,21.6078302712161
+Chesapeake Bay Retriever,23.5,21,26,65,55,75,800,27,3,Sporting,Gun,Protective,1,21.6078302712161
+Chesapeake Bay Retriever,23.5,21,26,65,55,75,800,27,3,Sporting,Gun,Playful,0,21.6078302712161
+German Wirehaired Pointer,24,22,26,65,60,70,800,44,6,Sporting,Gun,Alert,0,21.6078302712161
+German Wirehaired Pointer,24,22,26,65,60,70,800,44,6,Sporting,Gun,Friendly,1,21.6078302712161
+German Wirehaired Pointer,24,22,26,65,60,70,800,44,6,Sporting,Gun,Affectionate,1,21.6078302712161
+German Wirehaired Pointer,24,22,26,65,60,70,800,44,6,Sporting,Gun,Loyal,1,21.6078302712161
+German Wirehaired Pointer,24,22,26,65,60,70,800,44,6,Sporting,Gun,Gentle,0,21.6078302712161
+German Wirehaired Pointer,24,22,26,65,60,70,800,44,6,Sporting,Gun,Independent,0,21.6078302712161
+German Wirehaired Pointer,24,22,26,65,60,70,800,44,6,Sporting,Gun,Protective,0,21.6078302712161
+German Wirehaired Pointer,24,22,26,65,60,70,800,44,6,Sporting,Gun,Playful,0,21.6078302712161
+Dalmatian,21,19,23,57.5,45,70,800,39,3,Non-Sporting,Companion,Alert,0,15
+Dalmatian,21,19,23,57.5,45,70,800,39,3,Non-Sporting,Companion,Friendly,1,15
+Dalmatian,21,19,23,57.5,45,70,800,39,3,Non-Sporting,Companion,Affectionate,0,15
+Dalmatian,21,19,23,57.5,45,70,800,39,3,Non-Sporting,Companion,Loyal,0,15
+Dalmatian,21,19,23,57.5,45,70,800,39,3,Non-Sporting,Companion,Gentle,0,15
+Dalmatian,21,19,23,57.5,45,70,800,39,3,Non-Sporting,Companion,Independent,0,15
+Dalmatian,21,19,23,57.5,45,70,800,39,3,Non-Sporting,Companion,Protective,0,15
+Dalmatian,21,19,23,57.5,45,70,800,39,3,Non-Sporting,Companion,Playful,1,15
+Schipperke,11.5,10,13,15,12,18,800,15,3,Non-Sporting,Companion,Alert,0,15
+Schipperke,11.5,10,13,15,12,18,800,15,3,Non-Sporting,Companion,Friendly,0,15
+Schipperke,11.5,10,13,15,12,18,800,15,3,Non-Sporting,Companion,Affectionate,0,15
+Schipperke,11.5,10,13,15,12,18,800,15,3,Non-Sporting,Companion,Loyal,0,15
+Schipperke,11.5,10,13,15,12,18,800,15,3,Non-Sporting,Companion,Gentle,0,15
+Schipperke,11.5,10,13,15,12,18,800,15,3,Non-Sporting,Companion,Independent,1,15
+Schipperke,11.5,10,13,15,12,18,800,15,3,Non-Sporting,Companion,Protective,0,15
+Schipperke,11.5,10,13,15,12,18,800,15,3,Non-Sporting,Companion,Playful,0,15
+Skye Terrier,10,10,10,25,25,25,800,55,4,Terrier,Terrier2,Alert,0,15.1071428571429
+Skye Terrier,10,10,10,25,25,25,800,55,4,Terrier,Terrier2,Friendly,1,15.1071428571429
+Skye Terrier,10,10,10,25,25,25,800,55,4,Terrier,Terrier2,Affectionate,0,15.1071428571429
+Skye Terrier,10,10,10,25,25,25,800,55,4,Terrier,Terrier2,Loyal,1,15.1071428571429
+Skye Terrier,10,10,10,25,25,25,800,55,4,Terrier,Terrier2,Gentle,0,15.1071428571429
+Skye Terrier,10,10,10,25,25,25,800,55,4,Terrier,Terrier2,Independent,0,15.1071428571429
+Skye Terrier,10,10,10,25,25,25,800,55,4,Terrier,Terrier2,Protective,0,15.1071428571429
+Skye Terrier,10,10,10,25,25,25,800,55,4,Terrier,Terrier2,Playful,0,15.1071428571429
+English Springer Spaniel,20,20,20,50,45,55,750,13,3,Sporting,Gun,Alert,1,21.6078302712161
+English Springer Spaniel,20,20,20,50,45,55,750,13,3,Sporting,Gun,Friendly,0,21.6078302712161
+English Springer Spaniel,20,20,20,50,45,55,750,13,3,Sporting,Gun,Affectionate,1,21.6078302712161
+English Springer Spaniel,20,20,20,50,45,55,750,13,3,Sporting,Gun,Loyal,0,21.6078302712161
+English Springer Spaniel,20,20,20,50,45,55,750,13,3,Sporting,Gun,Gentle,0,21.6078302712161
+English Springer Spaniel,20,20,20,50,45,55,750,13,3,Sporting,Gun,Independent,0,21.6078302712161
+English Springer Spaniel,20,20,20,50,45,55,750,13,3,Sporting,Gun,Protective,0,21.6078302712161
+English Springer Spaniel,20,20,20,50,45,55,750,13,3,Sporting,Gun,Playful,1,21.6078302712161
+Boston Terrier,14.5,14,15,20,15,25,750,54,3,Non-Sporting,Companion,Alert,0,15
+Boston Terrier,14.5,14,15,20,15,25,750,54,3,Non-Sporting,Companion,Friendly,1,15
+Boston Terrier,14.5,14,15,20,15,25,750,54,3,Non-Sporting,Companion,Affectionate,1,15
+Boston Terrier,14.5,14,15,20,15,25,750,54,3,Non-Sporting,Companion,Loyal,0,15
+Boston Terrier,14.5,14,15,20,15,25,750,54,3,Non-Sporting,Companion,Gentle,1,15
+Boston Terrier,14.5,14,15,20,15,25,750,54,3,Non-Sporting,Companion,Independent,0,15
+Boston Terrier,14.5,14,15,20,15,25,750,54,3,Non-Sporting,Companion,Protective,0,15
+Boston Terrier,14.5,14,15,20,15,25,750,54,3,Non-Sporting,Companion,Playful,1,15
+German Shorthaired Pointer,23.5,20,27,65,50,80,700,17,3,Working,Gun,Alert,0,25.6904761904762
+German Shorthaired Pointer,23.5,20,27,65,50,80,700,17,3,Working,Gun,Friendly,0,25.6904761904762
+German Shorthaired Pointer,23.5,20,27,65,50,80,700,17,3,Working,Gun,Affectionate,1,25.6904761904762
+German Shorthaired Pointer,23.5,20,27,65,50,80,700,17,3,Working,Gun,Loyal,0,25.6904761904762
+German Shorthaired Pointer,23.5,20,27,65,50,80,700,17,3,Working,Gun,Gentle,0,25.6904761904762
+German Shorthaired Pointer,23.5,20,27,65,50,80,700,17,3,Working,Gun,Independent,0,25.6904761904762
+German Shorthaired Pointer,23.5,20,27,65,50,80,700,17,3,Working,Gun,Protective,0,25.6904761904762
+German Shorthaired Pointer,23.5,20,27,65,50,80,700,17,3,Working,Gun,Playful,0,25.6904761904762
+Australian Shepherd,20.5,18,23,50,40,60,700,42,5,Terrier,Terrier2,Alert,0,15.1071428571429
+Australian Shepherd,20.5,18,23,50,40,60,700,42,5,Terrier,Terrier2,Friendly,1,15.1071428571429
+Australian Shepherd,20.5,18,23,50,40,60,700,42,5,Terrier,Terrier2,Affectionate,1,15.1071428571429
+Australian Shepherd,20.5,18,23,50,40,60,700,42,5,Terrier,Terrier2,Loyal,0,15.1071428571429
+Australian Shepherd,20.5,18,23,50,40,60,700,42,5,Terrier,Terrier2,Gentle,0,15.1071428571429
+Australian Shepherd,20.5,18,23,50,40,60,700,42,5,Terrier,Terrier2,Independent,0,15.1071428571429
+Australian Shepherd,20.5,18,23,50,40,60,700,42,5,Terrier,Terrier2,Protective,1,15.1071428571429
+Australian Shepherd,20.5,18,23,50,40,60,700,42,5,Terrier,Terrier2,Playful,0,15.1071428571429
+Border Collie,20,19,21,40,40,40,700,1,6,Herding,Herding,Alert,1,21.4375
+Border Collie,20,19,21,40,40,40,700,1,6,Herding,Herding,Friendly,0,21.4375
+Border Collie,20,19,21,40,40,40,700,1,6,Herding,Herding,Affectionate,0,21.4375
+Border Collie,20,19,21,40,40,40,700,1,6,Herding,Herding,Loyal,1,21.4375
+Border Collie,20,19,21,40,40,40,700,1,6,Herding,Herding,Gentle,0,21.4375
+Border Collie,20,19,21,40,40,40,700,1,6,Herding,Herding,Independent,0,21.4375
+Border Collie,20,19,21,40,40,40,700,1,6,Herding,Herding,Protective,1,21.4375
+Border Collie,20,19,21,40,40,40,700,1,6,Herding,Herding,Playful,0,21.4375
+Chow Chow,20.5,19,22,50,45,55,700,76,3,Non-Sporting,Northern,Alert,0,15
+Chow Chow,20.5,19,22,50,45,55,700,76,3,Non-Sporting,Northern,Friendly,0,15
+Chow Chow,20.5,19,22,50,45,55,700,76,3,Non-Sporting,Northern,Affectionate,0,15
+Chow Chow,20.5,19,22,50,45,55,700,76,3,Non-Sporting,Northern,Loyal,1,15
+Chow Chow,20.5,19,22,50,45,55,700,76,3,Non-Sporting,Northern,Gentle,0,15
+Chow Chow,20.5,19,22,50,45,55,700,76,3,Non-Sporting,Northern,Independent,1,15
+Chow Chow,20.5,19,22,50,45,55,700,76,3,Non-Sporting,Northern,Protective,1,15
+Chow Chow,20.5,19,22,50,45,55,700,76,3,Non-Sporting,Northern,Playful,0,15
+Irish Terrier,18.5,18,19,26,25,27,700,53,5,Terrier,Terrier2,Alert,0,15.1071428571429
+Irish Terrier,18.5,18,19,26,25,27,700,53,5,Terrier,Terrier2,Friendly,0,15.1071428571429
+Irish Terrier,18.5,18,19,26,25,27,700,53,5,Terrier,Terrier2,Affectionate,0,15.1071428571429
+Irish Terrier,18.5,18,19,26,25,27,700,53,5,Terrier,Terrier2,Loyal,0,15.1071428571429
+Irish Terrier,18.5,18,19,26,25,27,700,53,5,Terrier,Terrier2,Gentle,0,15.1071428571429
+Irish Terrier,18.5,18,19,26,25,27,700,53,5,Terrier,Terrier2,Independent,0,15.1071428571429
+Irish Terrier,18.5,18,19,26,25,27,700,53,5,Terrier,Terrier2,Protective,1,15.1071428571429
+Irish Terrier,18.5,18,19,26,25,27,700,53,5,Terrier,Terrier2,Playful,0,15.1071428571429
+Redbone Coonhound,24,21,27,60,50,70,700,NA,1,Hound,Scenthound,Alert,0,21.8421052631579
+Redbone Coonhound,24,21,27,60,50,70,700,NA,1,Hound,Scenthound,Friendly,0,21.8421052631579
+Redbone Coonhound,24,21,27,60,50,70,700,NA,1,Hound,Scenthound,Affectionate,1,21.8421052631579
+Redbone Coonhound,24,21,27,60,50,70,700,NA,1,Hound,Scenthound,Loyal,0,21.8421052631579
+Redbone Coonhound,24,21,27,60,50,70,700,NA,1,Hound,Scenthound,Gentle,0,21.8421052631579
+Redbone Coonhound,24,21,27,60,50,70,700,NA,1,Hound,Scenthound,Independent,1,21.8421052631579
+Redbone Coonhound,24,21,27,60,50,70,700,NA,1,Hound,Scenthound,Protective,0,21.8421052631579
+Redbone Coonhound,24,21,27,60,50,70,700,NA,1,Hound,Scenthound,Playful,0,21.8421052631579
+Saluki,25.5,23,28,52.5,35,70,700,43,3,Hound,Sight,Alert,0,21.8421052631579
+Saluki,25.5,23,28,52.5,35,70,700,43,3,Hound,Sight,Friendly,0,21.8421052631579
+Saluki,25.5,23,28,52.5,35,70,700,43,3,Hound,Sight,Affectionate,0,21.8421052631579
+Saluki,25.5,23,28,52.5,35,70,700,43,3,Hound,Sight,Loyal,1,21.8421052631579
+Saluki,25.5,23,28,52.5,35,70,700,43,3,Hound,Sight,Gentle,0,21.8421052631579
+Saluki,25.5,23,28,52.5,35,70,700,43,3,Hound,Sight,Independent,0,21.8421052631579
+Saluki,25.5,23,28,52.5,35,70,700,43,3,Hound,Sight,Protective,0,21.8421052631579
+Saluki,25.5,23,28,52.5,35,70,700,43,3,Hound,Sight,Playful,0,21.8421052631579
+Silky Terrier,9.5,9,10,9.5,8,11,700,37,3,Toy,Terrier2,Alert,1,10.0714285714286
+Silky Terrier,9.5,9,10,9.5,8,11,700,37,3,Toy,Terrier2,Friendly,1,10.0714285714286
+Silky Terrier,9.5,9,10,9.5,8,11,700,37,3,Toy,Terrier2,Affectionate,0,10.0714285714286
+Silky Terrier,9.5,9,10,9.5,8,11,700,37,3,Toy,Terrier2,Loyal,0,10.0714285714286
+Silky Terrier,9.5,9,10,9.5,8,11,700,37,3,Toy,Terrier2,Gentle,0,10.0714285714286
+Silky Terrier,9.5,9,10,9.5,8,11,700,37,3,Toy,Terrier2,Independent,0,10.0714285714286
+Silky Terrier,9.5,9,10,9.5,8,11,700,37,3,Toy,Terrier2,Protective,0,10.0714285714286
+Silky Terrier,9.5,9,10,9.5,8,11,700,37,3,Toy,Terrier2,Playful,0,10.0714285714286
+Chihuahua,7.5,6,9,3.5,2,5,700,67,2,Toy,Companion,Alert,1,10.0714285714286
+Chihuahua,7.5,6,9,3.5,2,5,700,67,2,Toy,Companion,Friendly,0,10.0714285714286
+Chihuahua,7.5,6,9,3.5,2,5,700,67,2,Toy,Companion,Affectionate,0,10.0714285714286
+Chihuahua,7.5,6,9,3.5,2,5,700,67,2,Toy,Companion,Loyal,0,10.0714285714286
+Chihuahua,7.5,6,9,3.5,2,5,700,67,2,Toy,Companion,Gentle,0,10.0714285714286
+Chihuahua,7.5,6,9,3.5,2,5,700,67,2,Toy,Companion,Independent,0,10.0714285714286
+Chihuahua,7.5,6,9,3.5,2,5,700,67,2,Toy,Companion,Protective,0,10.0714285714286
+Chihuahua,7.5,6,9,3.5,2,5,700,67,2,Toy,Companion,Playful,0,10.0714285714286
+Maltese,9,8,10,5,4,6,700,59,3,Toy,Companion,Alert,0,10.0714285714286
+Maltese,9,8,10,5,4,6,700,59,3,Toy,Companion,Friendly,0,10.0714285714286
+Maltese,9,8,10,5,4,6,700,59,3,Toy,Companion,Affectionate,0,10.0714285714286
+Maltese,9,8,10,5,4,6,700,59,3,Toy,Companion,Loyal,0,10.0714285714286
+Maltese,9,8,10,5,4,6,700,59,3,Toy,Companion,Gentle,1,10.0714285714286
+Maltese,9,8,10,5,4,6,700,59,3,Toy,Companion,Independent,0,10.0714285714286
+Maltese,9,8,10,5,4,6,700,59,3,Toy,Companion,Protective,0,10.0714285714286
+Maltese,9,8,10,5,4,6,700,59,3,Toy,Companion,Playful,1,10.0714285714286
+Pomeranian,12,12,12,5,3,7,700,23,3,Toy,Companion,Alert,0,10.0714285714286
+Pomeranian,12,12,12,5,3,7,700,23,3,Toy,Companion,Friendly,1,10.0714285714286
+Pomeranian,12,12,12,5,3,7,700,23,3,Toy,Companion,Affectionate,0,10.0714285714286
+Pomeranian,12,12,12,5,3,7,700,23,3,Toy,Companion,Loyal,0,10.0714285714286
+Pomeranian,12,12,12,5,3,7,700,23,3,Toy,Companion,Gentle,0,10.0714285714286
+Pomeranian,12,12,12,5,3,7,700,23,3,Toy,Companion,Independent,0,10.0714285714286
+Pomeranian,12,12,12,5,3,7,700,23,3,Toy,Companion,Protective,0,10.0714285714286
+Pomeranian,12,12,12,5,3,7,700,23,3,Toy,Companion,Playful,1,10.0714285714286
+Greyhound,28.5,27,30,65,60,70,650,46,3,Hound,Sight,Alert,0,21.8421052631579
+Greyhound,28.5,27,30,65,60,70,650,46,3,Hound,Sight,Friendly,0,21.8421052631579
+Greyhound,28.5,27,30,65,60,70,650,46,3,Hound,Sight,Affectionate,1,21.8421052631579
+Greyhound,28.5,27,30,65,60,70,650,46,3,Hound,Sight,Loyal,0,21.8421052631579
+Greyhound,28.5,27,30,65,60,70,650,46,3,Hound,Sight,Gentle,1,21.8421052631579
+Greyhound,28.5,27,30,65,60,70,650,46,3,Hound,Sight,Independent,0,21.8421052631579
+Greyhound,28.5,27,30,65,60,70,650,46,3,Hound,Sight,Protective,0,21.8421052631579
+Greyhound,28.5,27,30,65,60,70,650,46,3,Hound,Sight,Playful,0,21.8421052631579
+Beagle,14.5,13,16,24,18,30,650,72,1,Hound,Scenthound,Alert,0,21.8421052631579
+Beagle,14.5,13,16,24,18,30,650,72,1,Hound,Scenthound,Friendly,1,21.8421052631579
+Beagle,14.5,13,16,24,18,30,650,72,1,Hound,Scenthound,Affectionate,0,21.8421052631579
+Beagle,14.5,13,16,24,18,30,650,72,1,Hound,Scenthound,Loyal,0,21.8421052631579
+Beagle,14.5,13,16,24,18,30,650,72,1,Hound,Scenthound,Gentle,1,21.8421052631579
+Beagle,14.5,13,16,24,18,30,650,72,1,Hound,Scenthound,Independent,1,21.8421052631579
+Beagle,14.5,13,16,24,18,30,650,72,1,Hound,Scenthound,Protective,0,21.8421052631579
+Beagle,14.5,13,16,24,18,30,650,72,1,Hound,Scenthound,Playful,0,21.8421052631579
+Finnish Spitz,17.5,15,20,33,31,35,600,43,3,Non-Sporting,Northern,Alert,0,15
+Finnish Spitz,17.5,15,20,33,31,35,600,43,3,Non-Sporting,Northern,Friendly,0,15
+Finnish Spitz,17.5,15,20,33,31,35,600,43,3,Non-Sporting,Northern,Affectionate,0,15
+Finnish Spitz,17.5,15,20,33,31,35,600,43,3,Non-Sporting,Northern,Loyal,1,15
+Finnish Spitz,17.5,15,20,33,31,35,600,43,3,Non-Sporting,Northern,Gentle,0,15
+Finnish Spitz,17.5,15,20,33,31,35,600,43,3,Non-Sporting,Northern,Independent,1,15
+Finnish Spitz,17.5,15,20,33,31,35,600,43,3,Non-Sporting,Northern,Protective,0,15
+Finnish Spitz,17.5,15,20,33,31,35,600,43,3,Non-Sporting,Northern,Playful,1,15
+Norwegian Elkhound,19.5,19,20,50,40,60,600,36,6,Hound,Northern,Alert,1,21.8421052631579
+Norwegian Elkhound,19.5,19,20,50,40,60,600,36,6,Hound,Northern,Friendly,0,21.8421052631579
+Norwegian Elkhound,19.5,19,20,50,40,60,600,36,6,Hound,Northern,Affectionate,0,21.8421052631579
+Norwegian Elkhound,19.5,19,20,50,40,60,600,36,6,Hound,Northern,Loyal,1,21.8421052631579
+Norwegian Elkhound,19.5,19,20,50,40,60,600,36,6,Hound,Northern,Gentle,0,21.8421052631579
+Norwegian Elkhound,19.5,19,20,50,40,60,600,36,6,Hound,Northern,Independent,0,21.8421052631579
+Norwegian Elkhound,19.5,19,20,50,40,60,600,36,6,Hound,Northern,Protective,0,21.8421052631579
+Norwegian Elkhound,19.5,19,20,50,40,60,600,36,6,Hound,Northern,Playful,1,21.8421052631579
+Dachshund,8.5,7,10,24,16,32,600,49,3,Hound,Scenthound,Alert,0,21.8421052631579
+Dachshund,8.5,7,10,24,16,32,600,49,3,Hound,Scenthound,Friendly,0,21.8421052631579
+Dachshund,8.5,7,10,24,16,32,600,49,3,Hound,Scenthound,Affectionate,0,21.8421052631579
+Dachshund,8.5,7,10,24,16,32,600,49,3,Hound,Scenthound,Loyal,0,21.8421052631579
+Dachshund,8.5,7,10,24,16,32,600,49,3,Hound,Scenthound,Gentle,0,21.8421052631579
+Dachshund,8.5,7,10,24,16,32,600,49,3,Hound,Scenthound,Independent,0,21.8421052631579
+Dachshund,8.5,7,10,24,16,32,600,49,3,Hound,Scenthound,Protective,0,21.8421052631579
+Dachshund,8.5,7,10,24,16,32,600,49,3,Hound,Scenthound,Playful,1,21.8421052631579
+Kerry Blue Terrier,19,17,21,37.5,30,45,550,35,5,Terrier,Terrier2,Alert,1,15.1071428571429
+Kerry Blue Terrier,19,17,21,37.5,30,45,550,35,5,Terrier,Terrier2,Friendly,0,15.1071428571429
+Kerry Blue Terrier,19,17,21,37.5,30,45,550,35,5,Terrier,Terrier2,Affectionate,1,15.1071428571429
+Kerry Blue Terrier,19,17,21,37.5,30,45,550,35,5,Terrier,Terrier2,Loyal,1,15.1071428571429
+Kerry Blue Terrier,19,17,21,37.5,30,45,550,35,5,Terrier,Terrier2,Gentle,1,15.1071428571429
+Kerry Blue Terrier,19,17,21,37.5,30,45,550,35,5,Terrier,Terrier2,Independent,0,15.1071428571429
+Kerry Blue Terrier,19,17,21,37.5,30,45,550,35,5,Terrier,Terrier2,Protective,0,15.1071428571429
+Kerry Blue Terrier,19,17,21,37.5,30,45,550,35,5,Terrier,Terrier2,Playful,0,15.1071428571429
+English Setter,25,23,27,62.5,45,80,500,37,3,Sporting,Gun,Alert,0,21.6078302712161
+English Setter,25,23,27,62.5,45,80,500,37,3,Sporting,Gun,Friendly,0,21.6078302712161
+English Setter,25,23,27,62.5,45,80,500,37,3,Sporting,Gun,Affectionate,0,21.6078302712161
+English Setter,25,23,27,62.5,45,80,500,37,3,Sporting,Gun,Loyal,0,21.6078302712161
+English Setter,25,23,27,62.5,45,80,500,37,3,Sporting,Gun,Gentle,1,21.6078302712161
+English Setter,25,23,27,62.5,45,80,500,37,3,Sporting,Gun,Independent,0,21.6078302712161
+English Setter,25,23,27,62.5,45,80,500,37,3,Sporting,Gun,Protective,0,21.6078302712161
+English Setter,25,23,27,62.5,45,80,500,37,3,Sporting,Gun,Playful,0,21.6078302712161
+Papillon,9.5,8,11,7.5,5,10,500,8,3,Toy,Companion,Alert,1,10.0714285714286
+Papillon,9.5,8,11,7.5,5,10,500,8,3,Toy,Companion,Friendly,1,10.0714285714286
+Papillon,9.5,8,11,7.5,5,10,500,8,3,Toy,Companion,Affectionate,0,10.0714285714286
+Papillon,9.5,8,11,7.5,5,10,500,8,3,Toy,Companion,Loyal,0,10.0714285714286
+Papillon,9.5,8,11,7.5,5,10,500,8,3,Toy,Companion,Gentle,0,10.0714285714286
+Papillon,9.5,8,11,7.5,5,10,500,8,3,Toy,Companion,Independent,0,10.0714285714286
+Papillon,9.5,8,11,7.5,5,10,500,8,3,Toy,Companion,Protective,0,10.0714285714286
+Papillon,9.5,8,11,7.5,5,10,500,8,3,Toy,Companion,Playful,0,10.0714285714286
+Toy Fox Terrier,10,10,10,5.5,4,7,500,NA,2,Toy,Terrier2,Alert,1,10.0714285714286
+Toy Fox Terrier,10,10,10,5.5,4,7,500,NA,2,Toy,Terrier2,Friendly,1,10.0714285714286
+Toy Fox Terrier,10,10,10,5.5,4,7,500,NA,2,Toy,Terrier2,Affectionate,0,10.0714285714286
+Toy Fox Terrier,10,10,10,5.5,4,7,500,NA,2,Toy,Terrier2,Loyal,1,10.0714285714286
+Toy Fox Terrier,10,10,10,5.5,4,7,500,NA,2,Toy,Terrier2,Gentle,0,10.0714285714286
+Toy Fox Terrier,10,10,10,5.5,4,7,500,NA,2,Toy,Terrier2,Independent,0,10.0714285714286
+Toy Fox Terrier,10,10,10,5.5,4,7,500,NA,2,Toy,Terrier2,Protective,0,10.0714285714286
+Toy Fox Terrier,10,10,10,5.5,4,7,500,NA,2,Toy,Terrier2,Playful,1,10.0714285714286
+Pointer,22.5,21,24,55,44,66,450,43,4,Sporting,Gun,Alert,0,21.6078302712161
+Pointer,22.5,21,24,55,44,66,450,43,4,Sporting,Gun,Friendly,0,21.6078302712161
+Pointer,22.5,21,24,55,44,66,450,43,4,Sporting,Gun,Affectionate,1,21.6078302712161
+Pointer,22.5,21,24,55,44,66,450,43,4,Sporting,Gun,Loyal,1,21.6078302712161
+Pointer,22.5,21,24,55,44,66,450,43,4,Sporting,Gun,Gentle,0,21.6078302712161
+Pointer,22.5,21,24,55,44,66,450,43,4,Sporting,Gun,Independent,0,21.6078302712161
+Pointer,22.5,21,24,55,44,66,450,43,4,Sporting,Gun,Protective,0,21.6078302712161
+Pointer,22.5,21,24,55,44,66,450,43,4,Sporting,Gun,Playful,0,21.6078302712161
+Basset Hound,14,14,14,45,40,50,400,71,1,Hound,Scenthound,Alert,0,21.8421052631579
+Basset Hound,14,14,14,45,40,50,400,71,1,Hound,Scenthound,Friendly,1,21.8421052631579
+Basset Hound,14,14,14,45,40,50,400,71,1,Hound,Scenthound,Affectionate,1,21.8421052631579
+Basset Hound,14,14,14,45,40,50,400,71,1,Hound,Scenthound,Loyal,0,21.8421052631579
+Basset Hound,14,14,14,45,40,50,400,71,1,Hound,Scenthound,Gentle,1,21.8421052631579
+Basset Hound,14,14,14,45,40,50,400,71,1,Hound,Scenthound,Independent,0,21.8421052631579
+Basset Hound,14,14,14,45,40,50,400,71,1,Hound,Scenthound,Protective,0,21.8421052631579
+Basset Hound,14,14,14,45,40,50,400,71,1,Hound,Scenthound,Playful,0,21.8421052631579
+Plott Hound,22,20,24,50,45,55,400,NA,3,Hound,Scenthound,Alert,1,21.8421052631579
+Plott Hound,22,20,24,50,45,55,400,NA,3,Hound,Scenthound,Friendly,0,21.8421052631579
+Plott Hound,22,20,24,50,45,55,400,NA,3,Hound,Scenthound,Affectionate,0,21.8421052631579
+Plott Hound,22,20,24,50,45,55,400,NA,3,Hound,Scenthound,Loyal,1,21.8421052631579
+Plott Hound,22,20,24,50,45,55,400,NA,3,Hound,Scenthound,Gentle,0,21.8421052631579
+Plott Hound,22,20,24,50,45,55,400,NA,3,Hound,Scenthound,Independent,0,21.8421052631579
+Plott Hound,22,20,24,50,45,55,400,NA,3,Hound,Scenthound,Protective,0,21.8421052631579
+Plott Hound,22,20,24,50,45,55,400,NA,3,Hound,Scenthound,Playful,0,21.8421052631579
+Pug,10.5,10,11,18,14,22,400,57,3,Toy,Companion,Alert,0,10.0714285714286
+Pug,10.5,10,11,18,14,22,400,57,3,Toy,Companion,Friendly,1,10.0714285714286
+Pug,10.5,10,11,18,14,22,400,57,3,Toy,Companion,Affectionate,1,10.0714285714286
+Pug,10.5,10,11,18,14,22,400,57,3,Toy,Companion,Loyal,1,10.0714285714286
+Pug,10.5,10,11,18,14,22,400,57,3,Toy,Companion,Gentle,1,10.0714285714286
+Pug,10.5,10,11,18,14,22,400,57,3,Toy,Companion,Independent,0,10.0714285714286
+Pug,10.5,10,11,18,14,22,400,57,3,Toy,Companion,Protective,0,10.0714285714286
+Pug,10.5,10,11,18,14,22,400,57,3,Toy,Companion,Playful,1,10.0714285714286
+Japanese Chin,9.5,8,11,7.5,4,11,400,62,3,Toy,Companion,Alert,1,10.0714285714286
+Japanese Chin,9.5,8,11,7.5,4,11,400,62,3,Toy,Companion,Friendly,0,10.0714285714286
+Japanese Chin,9.5,8,11,7.5,4,11,400,62,3,Toy,Companion,Affectionate,0,10.0714285714286
+Japanese Chin,9.5,8,11,7.5,4,11,400,62,3,Toy,Companion,Loyal,1,10.0714285714286
+Japanese Chin,9.5,8,11,7.5,4,11,400,62,3,Toy,Companion,Gentle,0,10.0714285714286
+Japanese Chin,9.5,8,11,7.5,4,11,400,62,3,Toy,Companion,Independent,1,10.0714285714286
+Japanese Chin,9.5,8,11,7.5,4,11,400,62,3,Toy,Companion,Protective,0,10.0714285714286
+Japanese Chin,9.5,8,11,7.5,4,11,400,62,3,Toy,Companion,Playful,1,10.0714285714286
+Harrier,20,19,21,50,40,60,350,NA,2,Hound,Scenthound,Alert,0,21.8421052631579
+Harrier,20,19,21,50,40,60,350,NA,2,Hound,Scenthound,Friendly,1,21.8421052631579
+Harrier,20,19,21,50,40,60,350,NA,2,Hound,Scenthound,Affectionate,0,21.8421052631579
+Harrier,20,19,21,50,40,60,350,NA,2,Hound,Scenthound,Loyal,0,21.8421052631579
+Harrier,20,19,21,50,40,60,350,NA,2,Hound,Scenthound,Gentle,0,21.8421052631579
+Harrier,20,19,21,50,40,60,350,NA,2,Hound,Scenthound,Independent,0,21.8421052631579
+Harrier,20,19,21,50,40,60,350,NA,2,Hound,Scenthound,Protective,0,21.8421052631579
+Harrier,20,19,21,50,40,60,350,NA,2,Hound,Scenthound,Playful,0,21.8421052631579
